@@ -4,8 +4,8 @@ This folder contains slide-ready architecture assets for the IBM Bob Hackathon s
 
 ## Files
 
-- `codequest-bob-architecture.svg` - 16:9 slide-ready architecture diagram.
-- `codequest-bob-architecture.mmd` - Mermaid source for fast editing.
+- `codequest-bob-architecture.svg` - 16:9 portfolio-ready architecture graphic with embedded IBM/Watson icons.
+- `codequest-bob-architecture.mmd` - Lightweight Mermaid reference for the underlying system flow.
 
 ## Diagram Story
 
@@ -19,8 +19,8 @@ The diagram is designed to communicate four things quickly:
    - Watson NLU: keyword and learning signal extraction.
    - Watson Text to Speech and Speech to Text: quest audio briefing loop.
    - IBM Cloudant: saved Skill Boost persistence.
-4. Submission evidence is explicit: `bob_sessions`, First PR package, Quest Badges, Passport timeline.
+4. Growth evidence is explicit: `bob_sessions`, First PR package, Quest Badges, Passport timeline.
 
 ## Recommended Slide Caption
 
-CodeQuest Bob converts repository context into a guided developer growth journey. IBM Bob drives repo-aware development and session evidence, while IBM Cloud services power live learning recommendations, speech briefings, and saved growth records through a server-side API proxy.
+CodeQuest Bob converts repository context into a guided developer growth journey. IBM Bob drives repo-aware development and exported session history, while IBM Cloud services power learning recommendations, speech briefings, and saved growth records through a server-side API proxy.

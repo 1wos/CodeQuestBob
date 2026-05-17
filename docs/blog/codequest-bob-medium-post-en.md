@@ -111,7 +111,7 @@ In CodeQuest Bob, the services were mapped to product behavior:
 
 IBM Bob offered several working modes, including Plan, Code, Advanced, Ask, and Orchestrator. I used Plan mode to shape the product direction and MVP scope, Code mode to build out the React/TypeScript structure, and Ask mode to check requirements and clarify implementation choices. At the end, I exported the Bob task history and included it in the GitHub repository.
 
-![IBM Cloud architecture for CodeQuest Bob](https://github.com/1wos/CodeQuestBob/raw/main/docs/screenshots/codequest-bob-architecture.png)
+![IBM Cloud architecture for CodeQuest Bob](https://github.com/1wos/CodeQuestBob/raw/main/docs/screenshots/codequest-bob-architecture.png?v=card-architecture)
 *Architecture overview: React client, Vercel API proxy, IBM Cloud services, and GitHub repository context.*
 
 The most important design choice was not "use many IBM services." It was making sure each service had a visible role in the user journey. So instead of hiding the integrations in a technical appendix, I connected them to actual features: Skill Boost Radar, Speech Briefing Loop, Developer Growth Passport, and the exported Bob session report.
