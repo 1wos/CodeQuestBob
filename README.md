@@ -96,6 +96,16 @@ Repository Intake
 
 The core product idea is simple: the developer should not only understand the repository. They should leave with confidence, evidence, and a next action.
 
+## Product Preview
+
+<p align="center">
+  <img src="docs/screenshots/codequest-bob-repository-orbit.png" alt="CodeQuest Bob interactive repository orbit map" width="100%" />
+</p>
+
+<p align="center">
+  <sub>The 3D Repository Orbit Map turns setup, exploration, improvement, and first PR packaging into a spatial quest path.</sub>
+</p>
+
 ## Highlights
 
 | Feature | What it does |
