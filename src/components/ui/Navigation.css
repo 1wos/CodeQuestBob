@@ -1,0 +1,142 @@
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 3rem;
+  margin: 0;
+  padding: 0 2rem;
+  background: var(--bg-primary);
+  border: 0;
+  border-bottom: 1px solid var(--border-subtle);
+  position: sticky;
+  top: 0;
+  z-index: var(--z-sticky);
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--text-primary);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.nav-logo {
+  width: 2rem;
+  height: 2rem;
+  display: inline-grid;
+  place-items: center;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  border-radius: 0;
+  color: var(--ibm-blue);
+  overflow: hidden;
+}
+
+.nav-logo svg {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+.nav-title {
+  color: var(--text-primary);
+  letter-spacing: 0;
+}
+
+.nav-items {
+  display: flex;
+  gap: 0;
+}
+
+.nav-item {
+  min-height: 3rem;
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0 1rem;
+  background: transparent;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  color: var(--text-secondary);
+  cursor: pointer;
+  font-size: var(--font-size-sm);
+  font-weight: 400;
+  transition: background var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast);
+}
+
+.nav-item:hover {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+}
+
+.nav-item:focus-visible {
+  outline: 2px solid var(--ibm-blue);
+  outline-offset: 2px;
+}
+
+.nav-item.active {
+  background: var(--bg-primary);
+  border-bottom-color: var(--ibm-blue);
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.nav-icon {
+  display: inline-flex;
+  width: 1.1rem;
+  height: 1.1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-icon svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.nav-label {
+  font-size: 0.82rem;
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .navigation {
+    width: 100%;
+    align-items: stretch;
+    flex-direction: column;
+    gap: 0;
+    padding: 0 1rem;
+  }
+
+  .nav-items {
+    width: 100%;
+    justify-content: space-between;
+    overflow-x: visible;
+    padding-bottom: 0.15rem;
+  }
+
+  .nav-item {
+    flex: 1 1 0;
+    justify-content: center;
+    padding-inline: 0.5rem;
+  }
+}
+
+@media (max-width: 620px) {
+  .nav-label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+
+  .nav-item {
+    min-width: 2.75rem;
+    padding-inline: 0.4rem;
+  }
+}

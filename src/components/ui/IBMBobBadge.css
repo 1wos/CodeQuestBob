@@ -1,0 +1,52 @@
+.ibm-bob-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.8rem 1rem;
+  background: #ffffff;
+  border: 1px solid #d0e2ff;
+  color: var(--text-primary);
+}
+
+.ibm-bob-icon {
+  color: var(--ibm-blue);
+  flex: 0 0 auto;
+}
+
+.ibm-bob-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.ibm-bob-title {
+  font-size: 0.92rem;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.ibm-bob-subtitle {
+  color: var(--text-secondary);
+  font-size: 0.78rem;
+}
+
+.ibm-bob-badge-compact {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.45rem 0.65rem;
+  background: #edf5ff;
+  border: 1px solid #d0e2ff;
+  color: var(--ibm-blue);
+  font-size: var(--font-size-sm);
+  font-weight: 400;
+}
+
+.ibm-bob-badge-inline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: var(--ibm-blue);
+  font-size: var(--font-size-sm);
+  font-weight: 400;
+}

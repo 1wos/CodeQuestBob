@@ -1,0 +1,73 @@
+flowchart LR
+  user["Participant / judge"]
+
+  subgraph client["Client product experience"]
+    home["Home dashboard"]
+    scan["Repository intake"]
+    map["3D quest map"]
+    detail["Quest detail"]
+    passport["Developer passport"]
+  end
+
+  subgraph proxy["Server-side API proxy"]
+    githubScan["GET /api/github/repo-scan"]
+    skillBoosts["GET /api/ibm/skill-boosts"]
+    briefing["POST /api/ibm/briefing"]
+    cloudantSave["POST /api/cloudant/skill-boosts"]
+    status["GET /api/ibm/status"]
+  end
+
+  subgraph sources["External developer signals"]
+    github["GitHub repository and search"]
+    huggingface["Hugging Face Hub"]
+  end
+
+  subgraph ibm["IBM ecosystem"]
+    bob["IBM Bob IDE"]
+    granite["watsonx.ai / IBM Granite"]
+    nlu["Watson NLU"]
+    tts["Watson Text to Speech"]
+    stt["Watson Speech to Text"]
+    cloudant["IBM Cloudant"]
+  end
+
+  subgraph artifacts["Submission and growth artifacts"]
+    sessions["bob_sessions reports"]
+    packages["First PR package"]
+    badges["Quest badges and passport timeline"]
+  end
+
+  user --> client
+  scan --> githubScan
+  detail --> skillBoosts
+  detail --> briefing
+  passport --> cloudantSave
+  home --> status
+
+  githubScan --> github
+  skillBoosts --> github
+  skillBoosts --> huggingface
+  skillBoosts --> nlu
+  skillBoosts --> granite
+  briefing --> tts
+  briefing --> stt
+  cloudantSave --> cloudant
+  status --> granite
+  status --> nlu
+  status --> tts
+  status --> stt
+
+  bob --> sessions
+  detail --> packages
+  passport --> badges
+  cloudant --> badges
+
+  classDef product fill:#ffffff,stroke:#8d8d8d,color:#161616;
+  classDef proxy fill:#f4f4f4,stroke:#8d8d8d,color:#161616;
+  classDef ibm fill:#edf5ff,stroke:#0f62fe,color:#161616;
+  classDef artifact fill:#f4fbf6,stroke:#24a148,color:#161616;
+
+  class user,home,scan,map,detail,passport product;
+  class githubScan,skillBoosts,briefing,cloudantSave,status proxy;
+  class bob,granite,nlu,tts,stt,cloudant ibm;
+  class sessions,packages,badges artifact;

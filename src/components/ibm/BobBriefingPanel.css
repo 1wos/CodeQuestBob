@@ -1,0 +1,136 @@
+.bob-briefing-panel {
+  padding: var(--spacing-xl);
+  background: var(--bg-primary);
+  border: 1px solid var(--border-subtle);
+}
+
+.bob-briefing-header {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-lg);
+}
+
+.bob-briefing-header svg {
+  flex: 0 0 auto;
+  color: var(--ibm-blue);
+}
+
+.bob-briefing-kicker {
+  margin-bottom: var(--spacing-xs);
+  color: var(--text-tertiary);
+  font-size: var(--font-size-xs);
+  font-weight: 400;
+  letter-spacing: 0.16px;
+  text-transform: none;
+}
+
+.bob-briefing-header h2 {
+  margin-bottom: var(--spacing-sm);
+}
+
+.bob-briefing-header p {
+  max-width: 52rem;
+  color: var(--text-secondary);
+}
+
+.bob-briefing-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+}
+
+.briefing-status {
+  color: var(--text-secondary);
+  font-size: var(--font-size-sm);
+}
+
+.briefing-spinner {
+  animation: briefing-spin 900ms linear infinite;
+}
+
+.briefing-results {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--spacing-md);
+}
+
+.briefing-status-row,
+.briefing-copy {
+  min-width: 0;
+  padding: var(--spacing-md);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+}
+
+.briefing-status-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-md);
+}
+
+.briefing-status-row span,
+.briefing-copy span {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  color: var(--text-secondary);
+  font-size: var(--font-size-sm);
+  font-weight: 400;
+}
+
+.briefing-status-row svg,
+.briefing-copy svg {
+  color: var(--ibm-blue);
+}
+
+.briefing-status-row strong {
+  color: var(--text-primary);
+  font-size: var(--font-size-sm);
+  white-space: nowrap;
+}
+
+.briefing-audio {
+  grid-column: 1 / -1;
+  width: 100%;
+  min-height: 2.75rem;
+}
+
+.briefing-copy {
+  grid-column: 1 / -1;
+}
+
+.briefing-copy p {
+  margin-top: var(--spacing-sm);
+  color: var(--text-primary);
+}
+
+@keyframes briefing-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .bob-briefing-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .bob-briefing-actions .btn,
+  .briefing-status {
+    width: 100%;
+  }
+
+  .briefing-results {
+    grid-template-columns: 1fr;
+  }
+
+  .briefing-status-row {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

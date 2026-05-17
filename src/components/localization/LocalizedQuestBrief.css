@@ -1,0 +1,111 @@
+.localized-quest-brief {
+  display: grid;
+  gap: var(--spacing-lg);
+  padding: var(--spacing-xl);
+  background: var(--bg-primary);
+  border: 1px solid var(--border-subtle);
+}
+
+.localized-quest-brief__kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  margin-bottom: var(--spacing-sm);
+  color: var(--text-secondary);
+  font-size: var(--font-size-sm);
+}
+
+.localized-quest-brief__kicker svg {
+  color: var(--ibm-blue);
+}
+
+.localized-quest-brief h2,
+.localized-quest-brief h3,
+.localized-quest-brief p {
+  margin: 0;
+}
+
+.localized-quest-brief h2 {
+  font-size: var(--font-size-2xl);
+  font-weight: 400;
+  color: var(--text-primary);
+}
+
+.localized-quest-brief__header p,
+.localized-quest-brief__main p {
+  margin-top: var(--spacing-xs);
+  color: var(--text-secondary);
+  line-height: 1.55;
+}
+
+.localized-quest-brief__body {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(15rem, 0.42fr);
+  gap: var(--spacing-lg);
+}
+
+.localized-quest-brief__main,
+.localized-quest-brief__next {
+  min-width: 0;
+  padding: var(--spacing-lg);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+}
+
+.localized-quest-brief__main h3 {
+  font-size: var(--font-size-xl);
+  font-weight: 400;
+  color: var(--text-primary);
+}
+
+.localized-quest-brief__next {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.localized-quest-brief__next span {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  color: var(--text-secondary);
+  font-size: var(--font-size-sm);
+}
+
+.localized-quest-brief__next span svg {
+  color: var(--ibm-blue);
+}
+
+.localized-quest-brief__next strong {
+  color: var(--text-primary);
+  font-weight: 400;
+  line-height: 1.45;
+}
+
+.localized-quest-brief__list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--spacing-md);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.localized-quest-brief__list li {
+  min-width: 0;
+  padding: var(--spacing-md);
+  background: var(--bg-primary);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-primary);
+  line-height: 1.5;
+}
+
+@media (max-width: 840px) {
+  .localized-quest-brief__body {
+    grid-template-columns: 1fr;
+  }
+
+  .localized-quest-brief__list {
+    grid-template-columns: 1fr;
+  }
+}

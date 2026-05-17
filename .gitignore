@@ -13,11 +13,22 @@ dist-ssr
 *.local
 .env
 .env.*
+!.env.example
 *.key
 *.pem
 credentials.json
 ibm-credentials.json
 *.token
+
+# Generated submission intermediates
+docs/submission-assets/demo-video/raw/
+docs/submission-assets/demo-video/frames/
+docs/submission-assets/demo-video/keyframes/
+docs/submission-assets/demo-video/voiceover-segments/
+docs/submission-assets/demo-video/video-contact-sheet.png
+docs/submission-assets/demo-video/video-keyframes.png
+docs/submission-assets/rendered/html-slides/
+docs/submission-assets/rendered/pages/
 
 # Editor directories and files
 .vscode/*

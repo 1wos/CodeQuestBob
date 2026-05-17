@@ -1,0 +1,323 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap');
+
+/* CodeQuest Bob - IBM Carbon-inspired global theme */
+
+:root {
+  /* IBM Carbon Palette */
+  --ibm-blue: #0f62fe;
+  --ibm-blue-dark: #0043ce;
+  --ibm-blue-light: #d0e2ff;
+  --ibm-purple: #0f62fe;
+  --ibm-purple-light: #d0e2ff;
+  --ibm-cyan: #0f62fe;
+  --ibm-teal: #0f62fe;
+  --ibm-green: #24a148;
+  --ibm-green-text: #0e6b2f;
+  --ibm-yellow: #f1c21b;
+  --ibm-orange: #f1c21b;
+  --ibm-orange-text: #684e00;
+  --ibm-red: #fa4d56;
+  --ibm-red-text: #b81921;
+  --ibm-magenta: #0f62fe;
+  --canvas: #ffffff;
+  --canvas-strong: #f4f4f4;
+  --surface: #ffffff;
+  --surface-muted: #f4f4f4;
+  --surface-ink: #161616;
+  --line-soft: #e0e0e0;
+  --line-strong: #8d8d8d;
+
+  /* Semantic Colors */
+  --primary: var(--ibm-blue);
+  --primary-hover: var(--ibm-blue-dark);
+  --secondary: #393939;
+  --accent: var(--ibm-blue);
+  --success: var(--ibm-green);
+  --warning: var(--ibm-yellow);
+  --danger: var(--ibm-red);
+
+  /* Text Colors */
+  --text-primary: #161616;
+  --text-secondary: #525252;
+  --text-tertiary: #8d8d8d;
+  --text-inverse: #ffffff;
+
+  /* Background Colors */
+  --bg-primary: var(--surface);
+  --bg-secondary: var(--surface-muted);
+  --bg-tertiary: var(--canvas-strong);
+  --bg-overlay: rgba(22, 22, 22, 0.5);
+
+  /* Border Colors */
+  --border-subtle: var(--line-soft);
+  --border-strong: var(--line-strong);
+
+  /* Spacing Scale */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 3rem;
+  --spacing-3xl: 4rem;
+
+  /* Typography */
+  --font-sans: 'IBM Plex Sans', system-ui, -apple-system, sans-serif;
+  --font-mono: 'IBM Plex Mono', 'Courier New', monospace;
+
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 2rem;
+  --font-size-4xl: 2.5rem;
+
+  /* Shadows */
+  --shadow-sm: none;
+  --shadow-md: none;
+  --shadow-lg: none;
+  --shadow-xl: none;
+
+  /* Border Radius */
+  --radius-sm: 0;
+  --radius-md: 0;
+  --radius-lg: 0;
+  --radius-xl: 0;
+  --radius-full: 0;
+
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition-base: 250ms ease;
+  --transition-slow: 350ms ease;
+
+  /* Z-Index Scale */
+  --z-base: 0;
+  --z-dropdown: 1000;
+  --z-sticky: 1100;
+  --z-fixed: 1200;
+  --z-modal: 1300;
+  --z-popover: 1400;
+  --z-tooltip: 1500;
+}
+
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: var(--font-size-base);
+  line-height: 1.5;
+  letter-spacing: 0.16px;
+  color: var(--text-primary);
+  background-color: var(--canvas);
+  background-image: none;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  min-height: 3rem;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.68;
+}
+
+button:focus-visible,
+input:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--ibm-blue);
+  outline-offset: 2px;
+}
+
+svg {
+  display: block;
+  flex-shrink: 0;
+}
+
+.nav-logo svg,
+.pipeline-icon svg,
+.quest-icon svg,
+.quest-badge-large svg,
+.reward-icon svg,
+.badge-icon-large svg,
+.passport-avatar svg,
+.metric-card svg,
+.card-heading-icon,
+.status-icon,
+.powered-icon {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--text-primary);
+  letter-spacing: 0;
+}
+
+h1 {
+  font-size: var(--font-size-4xl);
+  font-weight: 300;
+  margin-bottom: var(--spacing-lg);
+}
+
+h2 {
+  font-size: var(--font-size-3xl);
+  margin-bottom: var(--spacing-md);
+}
+
+h3 {
+  font-size: var(--font-size-2xl);
+  margin-bottom: var(--spacing-md);
+}
+
+p {
+  margin-bottom: var(--spacing-md);
+  color: var(--text-secondary);
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--primary-hover);
+}
+
+code {
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+  padding: 0.125rem 0.25rem;
+  background-color: var(--bg-secondary);
+  border-radius: var(--radius-sm);
+}
+
+/* Carbon refinement pass: flat geometry, 1px hairlines, scarce blue. */
+.navigation,
+.workspace-header,
+.metric-card,
+.dashboard-card,
+.repo-input-shell,
+.sample-btn,
+.scan-status,
+.pipeline-item,
+.pipeline-icon,
+.health-row,
+.passport-preview div,
+.card-link,
+.btn,
+.scan-info,
+.stat-card,
+.scan-section,
+.repo-overview-panel,
+.spatial-map-node,
+.live-repo-scan,
+.live-repo-result,
+.live-repo-metrics div,
+.live-repo-detail-grid section,
+.quest-card,
+.repo-spatial-layer,
+.repo-district,
+.quest-detail-hero,
+.quest-progress-panel,
+.tag,
+.quest-section,
+.objective-item,
+.reward-card,
+.first-pr-panel,
+.copy-command,
+.pr-draft-row button,
+.pr-draft-text,
+.reviewer-notes,
+.passport-hero,
+.stat-box,
+.passport-section,
+.badge-item,
+.saved-skill-boost-item,
+.bob-briefing-panel,
+.briefing-status-row,
+.briefing-copy,
+.skill-boost-radar,
+.skill-boost-radar__resource-card {
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+.workspace-header,
+.metric-card,
+.dashboard-card,
+.scan-info,
+.stat-card,
+.scan-section,
+.quest-card,
+.quest-section,
+.passport-section {
+  background: var(--bg-primary) !important;
+  border-color: var(--border-subtle) !important;
+}
+
+/* Utility Classes */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-lg);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-primary {
+  color: var(--text-primary);
+}
+
+.text-secondary {
+  color: var(--text-secondary);
+}
+
+.text-ibm-blue {
+  color: var(--ibm-blue);
+}
+
+.bg-primary {
+  background-color: var(--bg-primary);
+}
+
+.bg-secondary {
+  background-color: var(--bg-secondary);
+}
+
+/* Made with Bob */

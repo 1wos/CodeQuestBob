@@ -1,0 +1,440 @@
+/* Quest Map Screen Styles */
+
+.quest-map-screen {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column;
+  padding: var(--spacing-xl);
+  background: var(--canvas);
+}
+
+.quest-map-header {
+  width: min(100%, 1120px);
+  margin: 0 auto var(--spacing-lg);
+  padding-bottom: var(--spacing-md);
+  border-bottom: 1px solid var(--border-subtle);
+  text-align: left;
+}
+
+.quest-map-header h1 {
+  margin-bottom: var(--spacing-sm);
+  font-weight: 300;
+}
+
+.quest-map-header p {
+  color: var(--text-secondary);
+  font-size: var(--font-size-lg);
+}
+
+.quest-map-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-xl);
+  padding: var(--spacing-lg) 0 var(--spacing-2xl);
+  perspective: none;
+}
+
+.repository-orbit-loading {
+  width: min(100%, 1120px);
+  min-height: 360px;
+  display: grid;
+  place-items: center;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+  font-weight: 400;
+}
+
+.quest-path {
+  width: min(100%, 1120px);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xl);
+  justify-content: flex-start;
+  padding: var(--spacing-sm) 0 var(--spacing-lg);
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: thin;
+  transform: none;
+  transform-style: flat;
+}
+
+.quest-path::-webkit-scrollbar {
+  height: 0.5rem;
+}
+
+.quest-path::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+.quest-path::-webkit-scrollbar-thumb {
+  background: var(--border-strong);
+}
+
+.quest-node {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xl);
+  position: relative;
+  scroll-snap-align: start;
+}
+
+.quest-card {
+  width: 270px;
+  min-height: 18.5rem;
+  padding: var(--spacing-xl);
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-primary);
+  cursor: pointer;
+  font: inherit;
+  text-align: initial;
+  transition:
+    border-color var(--transition-base),
+    background var(--transition-base),
+    color var(--transition-base),
+    transform var(--transition-base);
+  position: relative;
+  transform: none;
+  overflow: hidden;
+}
+
+.quest-card:hover {
+  background: #f8fbff;
+  border-color: var(--ibm-blue) !important;
+  transform: translateY(-3px);
+}
+
+.quest-card:focus-visible {
+  outline: 2px solid var(--ibm-blue);
+  outline-offset: 4px;
+}
+
+.quest-card.completed {
+  background-color: #f4fbf6;
+  border-color: var(--ibm-green) !important;
+}
+
+.quest-completed-label {
+  position: absolute;
+  top: -1.9rem;
+  left: 0;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border: 1px solid rgba(36, 161, 72, 0.28);
+  background: #f4fbf6;
+  color: var(--ibm-green);
+  font-size: var(--font-size-xs);
+  font-weight: 400;
+  letter-spacing: 0.16px;
+  text-transform: none;
+}
+
+.quest-level {
+  position: absolute;
+  top: var(--spacing-md);
+  right: var(--spacing-md);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-primary);
+  font-size: var(--font-size-xs);
+  font-weight: 400;
+  transition:
+    background var(--transition-fast),
+    border-color var(--transition-fast),
+    color var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.quest-card:hover .quest-level {
+  background: #edf5ff;
+  border-color: #d0e2ff;
+  color: var(--ibm-blue);
+  transform: translateY(-1px);
+}
+
+.quest-icon {
+  display: inline-grid;
+  width: 3.75rem;
+  height: 3.75rem;
+  place-items: center;
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-secondary);
+  color: var(--ibm-blue);
+  text-align: center;
+  margin-bottom: var(--spacing-md);
+  overflow: hidden;
+  transition:
+    background var(--transition-fast),
+    border-color var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.quest-card:hover .quest-icon {
+  background: #edf5ff;
+  border-color: var(--ibm-blue);
+  transform: rotate(-2deg) scale(1.04);
+}
+
+.quest-icon svg {
+  width: 2.25rem;
+  height: 2.25rem;
+}
+
+.quest-title {
+  font-size: var(--font-size-xl);
+  font-weight: 400;
+  margin-bottom: var(--spacing-xs);
+  text-align: left;
+}
+
+.quest-subtitle {
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+  text-align: left;
+  margin-bottom: var(--spacing-md);
+}
+
+.quest-meta {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--spacing-md) 0;
+  border-top: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);
+  margin-bottom: var(--spacing-sm);
+  font-size: var(--font-size-sm);
+}
+
+.quest-xp {
+  color: var(--ibm-blue);
+  font-weight: 600;
+  transition:
+    background var(--transition-fast),
+    color var(--transition-fast);
+}
+
+.quest-card:hover .quest-xp {
+  background: #edf5ff;
+  color: var(--ibm-blue);
+}
+
+.quest-time {
+  color: var(--text-secondary);
+}
+
+.quest-difficulty {
+  text-align: center;
+  font-size: var(--font-size-xs);
+  text-transform: none;
+  letter-spacing: 0.16px;
+  color: var(--text-tertiary);
+  font-weight: 400;
+  transition:
+    color var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.quest-card:hover .quest-difficulty {
+  color: var(--ibm-blue);
+  transform: translateY(-1px);
+}
+
+.quest-connector {
+  font-size: 2rem;
+  color: var(--ibm-blue);
+  transform: none;
+  flex: 0 0 auto;
+}
+
+.quest-map-footer {
+  text-align: center;
+  padding: var(--spacing-xl) 0;
+  border-top: 2px solid var(--border-subtle);
+}
+
+.powered-by {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  color: var(--text-secondary);
+  font-size: var(--font-size-sm);
+}
+
+.powered-icon {
+  font-size: 1.25rem;
+}
+
+.repo-spatial-layer {
+  width: min(100%, 1120px);
+  padding: var(--spacing-xl);
+  background: var(--bg-primary);
+  border: 1px solid var(--border-subtle);
+  transform: none;
+  transform-style: flat;
+}
+
+.repo-spatial-copy {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--spacing-xl);
+  margin-bottom: var(--spacing-lg);
+}
+
+.repo-spatial-copy span {
+  color: var(--text-primary);
+  font-weight: 400;
+}
+
+.repo-spatial-copy p {
+  max-width: 44rem;
+  color: var(--text-secondary);
+  font-size: var(--font-size-sm);
+}
+
+.repo-district-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--spacing-md);
+}
+
+.repo-district {
+  min-width: 0;
+  display: flex;
+  min-height: 9rem;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-lg);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  transform: none;
+}
+
+.repo-district strong {
+  color: var(--text-primary);
+  text-transform: capitalize;
+}
+
+.repo-district-signal {
+  display: inline-flex;
+  width: fit-content;
+  padding: 0.3rem 0.45rem;
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-primary);
+  color: var(--ibm-blue);
+  font-size: var(--font-size-sm);
+}
+
+.repo-district span {
+  color: var(--text-secondary);
+  font-size: var(--font-size-sm);
+}
+
+@media (max-width: 768px) {
+  .quest-map-screen {
+    padding: var(--spacing-md);
+  }
+
+  .quest-map-header h1 {
+    font-size: 2.35rem;
+  }
+
+  .quest-map-header p {
+    font-size: var(--font-size-base);
+  }
+
+  .quest-path,
+  .repo-spatial-layer {
+    transform: none;
+  }
+
+  .quest-path {
+    width: 100%;
+    gap: var(--spacing-lg);
+    padding-inline: 0;
+  }
+
+  .quest-node {
+    flex-direction: row;
+    gap: var(--spacing-lg);
+  }
+
+  .quest-connector {
+    transform: none;
+  }
+
+  .quest-card {
+    width: min(78vw, 300px);
+    max-width: none;
+  }
+
+  .repo-spatial-copy {
+    flex-direction: column;
+  }
+
+  .repo-district-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .quest-map-screen {
+    padding: var(--spacing-sm);
+  }
+
+  .quest-map-header h1 {
+    font-size: 2rem;
+  }
+
+  .quest-map-content {
+    gap: var(--spacing-lg);
+    padding-top: var(--spacing-sm);
+  }
+
+  .quest-path {
+    gap: var(--spacing-md);
+    padding-bottom: var(--spacing-md);
+  }
+
+  .quest-node {
+    gap: var(--spacing-md);
+  }
+
+  .quest-card {
+    width: min(86vw, 280px);
+    min-height: 17rem;
+    padding: var(--spacing-lg);
+  }
+
+  .quest-connector {
+    display: none;
+  }
+
+  .repo-spatial-layer {
+    padding: var(--spacing-lg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .quest-card,
+  .quest-progress-fill,
+  .quest-icon,
+  .quest-level,
+  .quest-difficulty {
+    transition: none;
+  }
+
+  .quest-card:hover,
+  .quest-card:hover .quest-icon,
+  .quest-card:hover .quest-level,
+  .quest-card:hover .quest-difficulty {
+    transform: none;
+  }
+}
+
+/* Made with Bob */

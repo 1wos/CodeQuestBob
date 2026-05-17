@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">CodeQuest Bob architecture diagram</title>
+  <desc id="desc">Architecture diagram showing the CodeQuest Bob client experience, server-side API proxy, IBM services, external developer signals, and hackathon evidence artifacts.</desc>
+  <defs>
+    <marker id="arrow-blue" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#0f62fe" />
+    </marker>
+    <marker id="arrow-gray" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#6f6f6f" />
+    </marker>
+    <style>
+      .canvas { fill: #ffffff; }
+      .title { fill: #161616; font: 300 46px "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif; letter-spacing: 0; }
+      .subtitle { fill: #525252; font: 400 18px "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif; letter-spacing: .16px; }
+      .label { fill: #161616; font: 400 17px "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif; letter-spacing: .16px; }
+      .small { fill: #525252; font: 400 13px "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif; letter-spacing: .16px; }
+      .tiny { fill: #6f6f6f; font: 400 12px "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif; letter-spacing: .16px; }
+      .section-title { fill: #161616; font: 400 20px "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif; }
+      .blue { fill: #0f62fe; }
+      .panel { fill: #ffffff; stroke: #c6c6c6; stroke-width: 1; }
+      .panel-soft { fill: #f4f4f4; stroke: #c6c6c6; stroke-width: 1; }
+      .panel-blue { fill: #edf5ff; stroke: #78a9ff; stroke-width: 1; }
+      .panel-green { fill: #f4fbf6; stroke: #42be65; stroke-width: 1; }
+      .chip { fill: #ffffff; stroke: #c6c6c6; stroke-width: 1; }
+      .chip-blue { fill: #edf5ff; stroke: #d0e2ff; stroke-width: 1; }
+      .line-blue { stroke: #0f62fe; stroke-width: 2; fill: none; marker-end: url(#arrow-blue); }
+      .line-gray { stroke: #6f6f6f; stroke-width: 1.5; fill: none; marker-end: url(#arrow-gray); }
+      .line-soft { stroke: #c6c6c6; stroke-width: 1; fill: none; }
+    </style>
+  </defs>
+
+  <rect class="canvas" x="0" y="0" width="1600" height="900" />
+  <text class="title" x="80" y="78">CodeQuest Bob Architecture</text>
+  <text class="subtitle" x="82" y="112">Repository context becomes guided quests, AI learning support, speech briefings, and portfolio-ready growth evidence.</text>
+
+  <rect class="panel" x="80" y="160" width="230" height="108" />
+  <text class="section-title" x="110" y="201">Participant / judge</text>
+  <text class="small" x="110" y="230">Uses the web app demo</text>
+  <text class="small" x="110" y="251">and reviews exported reports</text>
+
+  <rect class="panel" x="370" y="135" width="390" height="220" />
+  <text class="section-title" x="400" y="176">Client product experience</text>
+  <text class="small" x="400" y="201">React + TypeScript + Vite</text>
+  <rect class="chip" x="400" y="226" width="140" height="38" />
+  <text class="small" x="420" y="250">Home</text>
+  <rect class="chip" x="560" y="226" width="160" height="38" />
+  <text class="small" x="580" y="250">Repo intake</text>
+  <rect class="chip-blue" x="400" y="280" width="160" height="38" />
+  <text class="small" x="420" y="304">3D quest map</text>
+  <rect class="chip" x="580" y="280" width="140" height="38" />
+  <text class="small" x="600" y="304">Passport</text>
+  <text class="tiny" x="400" y="340">State: quests, objectives, saved boosts, badges</text>
+
+  <rect class="panel-soft" x="830" y="130" width="330" height="285" />
+  <text class="section-title" x="860" y="171">Server-side API proxy</text>
+  <text class="small" x="860" y="196">Keeps credentials out of the browser</text>
+  <rect class="chip" x="860" y="221" width="260" height="32" />
+  <text class="tiny" x="878" y="242">GET /api/github/repo-scan</text>
+  <rect class="chip" x="860" y="261" width="260" height="32" />
+  <text class="tiny" x="878" y="282">GET /api/ibm/skill-boosts</text>
+  <rect class="chip" x="860" y="301" width="260" height="32" />
+  <text class="tiny" x="878" y="322">POST /api/ibm/briefing</text>
+  <rect class="chip" x="860" y="341" width="260" height="32" />
+  <text class="tiny" x="878" y="362">POST /api/cloudant/skill-boosts</text>
+  <rect class="chip" x="860" y="381" width="260" height="32" />
+  <text class="tiny" x="878" y="402">GET /api/ibm/status</text>
+
+  <rect class="panel-blue" x="1230" y="110" width="290" height="330" />
+  <text class="section-title" x="1260" y="151">IBM ecosystem</text>
+  <text class="small" x="1260" y="176">Used inside the product flow</text>
+  <rect class="chip-blue" x="1260" y="203" width="220" height="34" />
+  <text class="tiny" x="1277" y="224">IBM Bob IDE</text>
+  <rect class="chip-blue" x="1260" y="245" width="220" height="34" />
+  <text class="tiny" x="1277" y="266">watsonx.ai / Granite</text>
+  <rect class="chip-blue" x="1260" y="287" width="220" height="34" />
+  <text class="tiny" x="1277" y="308">Watson NLU</text>
+  <rect class="chip-blue" x="1260" y="329" width="220" height="34" />
+  <text class="tiny" x="1277" y="350">Text to Speech</text>
+  <rect class="chip-blue" x="1260" y="371" width="220" height="34" />
+  <text class="tiny" x="1277" y="392">Speech to Text</text>
+  <rect class="chip-blue" x="1260" y="413" width="220" height="34" />
+  <text class="tiny" x="1277" y="434">Cloudant</text>
+
+  <rect class="panel" x="1230" y="500" width="290" height="150" />
+  <text class="section-title" x="1260" y="541">Developer signals</text>
+  <rect class="chip" x="1260" y="565" width="220" height="34" />
+  <text class="tiny" x="1277" y="586">GitHub repositories/search</text>
+  <rect class="chip" x="1260" y="607" width="220" height="34" />
+  <text class="tiny" x="1277" y="628">Hugging Face Hub</text>
+
+  <rect class="panel-green" x="370" y="460" width="790" height="180" />
+  <text class="section-title" x="400" y="501">Growth and submission artifacts</text>
+  <rect class="chip" x="400" y="525" width="210" height="36" />
+  <text class="tiny" x="418" y="548">bob_sessions reports</text>
+  <rect class="chip" x="635" y="525" width="210" height="36" />
+  <text class="tiny" x="653" y="548">First PR package</text>
+  <rect class="chip" x="870" y="525" width="240" height="36" />
+  <text class="tiny" x="888" y="548">Quest badges + passport</text>
+  <text class="small" x="400" y="595">Judges see how IBM Bob shaped the repository analysis, implementation, review, and demo preparation.</text>
+  <text class="small" x="400" y="619">Users see progress as quests, saved skill boosts, speech briefings, and a developer growth passport.</text>
+
+  <rect class="panel-soft" x="80" y="460" width="230" height="180" />
+  <text class="section-title" x="110" y="501">IBM Bob work loop</text>
+  <text class="small" x="110" y="528">Analyze repo context</text>
+  <text class="small" x="110" y="552">Generate/refine code</text>
+  <text class="small" x="110" y="576">Review UX and tests</text>
+  <text class="small" x="110" y="600">Export session reports</text>
+
+  <rect class="panel-soft" x="80" y="700" width="1440" height="120" />
+  <text class="section-title" x="110" y="742">Security and deployment boundary</text>
+  <text class="small" x="110" y="772">Browser never receives IBM API keys. The API proxy reads environment variables and calls IBM Cloud services server-side.</text>
+  <text class="small" x="110" y="798">Public GitHub repo includes source code and exported Bob reports. Demo URL can be deployed behind the same proxy pattern.</text>
+
+  <path class="line-blue" d="M310 214 L370 214" />
+  <path class="line-blue" d="M760 245 L830 245" />
+  <path class="line-blue" d="M1160 260 L1230 260" />
+  <path class="line-blue" d="M1160 560 L1230 560" />
+  <path class="line-gray" d="M995 415 L995 460" />
+  <path class="line-gray" d="M195 460 L195 268" />
+  <path class="line-gray" d="M310 550 L370 550" />
+  <path class="line-gray" d="M760 355 L760 550 L370 550" />
+  <path class="line-soft" d="M1230 440 L1160 550" />
+  <path class="line-soft" d="M1230 650 L1160 610" />
+
+  <text class="tiny blue" x="790" y="232">repository and quest actions</text>
+  <text class="tiny blue" x="1175" y="247">AI, language, speech, storage</text>
+  <text class="tiny" x="1012" y="448">saved skill boosts</text>
+</svg>

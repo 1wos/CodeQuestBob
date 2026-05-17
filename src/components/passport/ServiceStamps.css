@@ -1,0 +1,199 @@
+.service-stamps {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-subtle);
+  padding: 1.5rem;
+}
+
+.stamps-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.stamps-header h3 {
+  margin: 0;
+  font-size: 1.125rem;
+  font-weight: 400;
+  color: var(--text-primary);
+}
+
+.stamps-count {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  font-weight: 400;
+}
+
+.stamps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.stamp-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-subtle);
+  transition:
+    background var(--transition-fast),
+    border-color var(--transition-fast),
+    opacity var(--transition-fast),
+    transform var(--transition-fast);
+  position: relative;
+}
+
+.stamp-card.unlocked {
+  border-color: var(--ibm-blue);
+  background: var(--bg-primary);
+}
+
+.stamp-card.locked {
+  opacity: 0.62;
+}
+
+.stamp-card.unlocked:hover {
+  transform: translateY(-3px) rotate(-0.35deg);
+  border-color: var(--ibm-blue);
+  background: #f8fbff;
+}
+
+.stamp-icon {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  transition:
+    background var(--transition-fast),
+    border-color var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.stamp-card.unlocked .stamp-icon {
+  background: var(--ibm-blue);
+  border-color: var(--ibm-blue);
+  animation: badge-earned-pop 360ms ease-out both;
+}
+
+.stamp-card.unlocked:hover .stamp-icon {
+  transform: rotate(-3deg) scale(1.06);
+}
+
+.stamp-icon-svg {
+  color: var(--text-secondary);
+}
+
+.stamp-card.unlocked .stamp-icon-svg {
+  color: white;
+}
+
+.stamp-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.stamp-title {
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.stamp-description {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+.stamp-badge {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  font-size: 0.625rem;
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: 0.16px;
+  color: var(--ibm-blue);
+  background: #edf5ff;
+  padding: 0.25rem 0.5rem;
+  border: 1px solid #d0e2ff;
+  transition:
+    background var(--transition-fast),
+    border-color var(--transition-fast),
+    color var(--transition-fast);
+  animation: badge-earned-chip 300ms ease-out both;
+}
+
+.stamp-card.unlocked:hover .stamp-badge {
+  background: var(--ibm-blue);
+  border-color: var(--ibm-blue);
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .service-stamps {
+    padding: 1rem;
+  }
+
+  .stamps-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+
+  .stamps-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stamp-card {
+    align-items: flex-start;
+    padding-right: 5.35rem;
+  }
+}
+
+@keyframes badge-earned-pop {
+  0% {
+    opacity: 0.4;
+    transform: scale(0.92);
+  }
+  60% {
+    transform: scale(1.08);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes badge-earned-chip {
+  0% {
+    opacity: 0;
+    transform: translateY(-0.2rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stamp-card,
+  .stamp-icon,
+  .stamp-badge {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .stamp-card.unlocked:hover,
+  .stamp-card.unlocked:hover .stamp-icon {
+    transform: none;
+  }
+}
+
+/* Made with Bob */

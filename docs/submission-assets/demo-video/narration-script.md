@@ -1,0 +1,15 @@
+# CodeQuest Bob Demo Narration
+
+Provider: azure-cli-auto
+Video duration: 51.52 seconds
+
+| Time | Narration |
+|---|---|
+| 00:00:00.700 - 00:00:05.400 | CodeQuest Bob turns an unfamiliar repository into a guided developer growth journey. |
+| 00:00:05.700 - 00:00:11.700 | We start with repository intake. GitHub context becomes the basis for a practical onboarding path. |
+| 00:00:12.000 - 00:00:17.900 | The quest map becomes the center of the product: setup, exploration, improvement, and first PR. |
+| 00:00:18.200 - 00:00:24.800 | Inside each quest, objectives turn scattered maintainer advice into visible, trackable progress. |
+| 00:00:25.100 - 00:00:31.900 | Bob briefing adds a speech layer. If live speech is unavailable, the written guidance still works. |
+| 00:00:32.200 - 00:00:38.600 | Skill Boost Radar saves relevant learning recommendations into the Developer Passport. |
+| 00:00:39.000 - 00:00:45.400 | First PR Package turns analysis into action: task, commands, draft, checklist, and reviewer notes. |
+| 00:00:45.800 - 00:00:50.700 | The Passport records growth, badges, saved resources, and AI-assisted activity after the session. |

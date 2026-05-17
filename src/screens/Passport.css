@@ -1,0 +1,398 @@
+/* Passport Screen Styles */
+
+.passport-screen {
+  width: 100%;
+  box-sizing: border-box;
+  padding: var(--spacing-xl);
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.passport-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-2xl);
+}
+
+.passport-hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-xl);
+  padding: var(--spacing-xl);
+  background: var(--bg-primary);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-xl);
+  text-align: left;
+}
+
+.passport-avatar {
+  width: 5rem;
+  height: 5rem;
+  display: inline-grid;
+  place-items: center;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  color: var(--ibm-blue);
+  margin-bottom: 0;
+  overflow: hidden;
+}
+
+.passport-avatar svg {
+  width: 2.25rem;
+  height: 2.25rem;
+}
+
+.passport-hero h2 {
+  margin-right: auto;
+  margin-bottom: 0;
+  color: var(--text-primary);
+  font-weight: 300;
+}
+
+.passport-level {
+  display: flex;
+  gap: var(--spacing-md);
+  justify-content: center;
+  align-items: center;
+}
+
+.level-badge {
+  padding: var(--spacing-sm) var(--spacing-lg);
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  font-size: var(--font-size-base);
+  font-weight: 400;
+}
+
+.xp-text {
+  font-size: var(--font-size-lg);
+  color: var(--text-secondary);
+}
+
+.passport-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-2xl);
+}
+
+.stat-box {
+  padding: var(--spacing-xl);
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-subtle);
+  text-align: left;
+  transition: background var(--transition-fast), border-color var(--transition-fast);
+}
+
+.stat-box:hover {
+  background: var(--bg-secondary);
+  border-color: var(--ibm-blue);
+}
+
+.stat-value {
+  font-size: var(--font-size-3xl);
+  font-weight: 400;
+  color: var(--ibm-blue);
+  margin-bottom: var(--spacing-xs);
+}
+
+.stat-label {
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+  text-transform: none;
+  letter-spacing: 0.16px;
+}
+
+.passport-section {
+  padding: var(--spacing-xl);
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-subtle);
+  margin-bottom: var(--spacing-xl);
+}
+
+.passport-section h3 {
+  margin-bottom: var(--spacing-lg);
+  color: var(--text-primary);
+}
+
+.bob-usage-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--spacing-md);
+}
+
+.usage-item {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--spacing-md);
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+}
+
+.usage-label {
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.usage-value {
+  font-weight: 400;
+  color: var(--ibm-blue);
+}
+
+.saved-skill-boost-list {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border-subtle);
+  overflow: hidden;
+}
+
+.saved-skill-boost-item {
+  display: grid;
+  grid-template-columns: 8rem minmax(0, 1fr) 10rem;
+  gap: var(--spacing-md);
+  align-items: center;
+  padding: var(--spacing-md);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  text-decoration: none;
+}
+
+.saved-skill-boost-item + .saved-skill-boost-item {
+  border-top: 1px solid var(--border-subtle);
+}
+
+.saved-skill-boost-item:hover {
+  background: var(--bg-secondary);
+}
+
+.saved-skill-boost-item span,
+.saved-skill-boost-item small {
+  color: var(--text-secondary);
+  font-size: var(--font-size-sm);
+}
+
+.saved-skill-boost-item strong {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.badge-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.badge-item {
+  padding: var(--spacing-lg);
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  text-align: left;
+  transition: background var(--transition-fast), border-color var(--transition-fast);
+}
+
+.badge-item:hover {
+  background: var(--bg-primary);
+  border-color: var(--ibm-blue);
+}
+
+.badge-icon-large {
+  width: 4rem;
+  height: 4rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--spacing-md);
+  margin-left: 0;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-subtle);
+  color: var(--ibm-blue);
+  margin-bottom: var(--spacing-md);
+  overflow: hidden;
+}
+
+.badge-icon-large svg {
+  width: 2.35rem;
+  height: 2.35rem;
+}
+
+.badge-item h4 {
+  margin-bottom: var(--spacing-xs);
+  color: var(--text-primary);
+}
+
+.badge-item p {
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-sm);
+}
+
+.badge-rarity {
+  display: inline-block;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border: 1px solid var(--border-subtle);
+  font-size: var(--font-size-xs);
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: 0.16px;
+}
+
+.rarity-common {
+  background-color: #f4fbf6;
+  color: var(--ibm-green-text);
+}
+
+.rarity-rare {
+  background-color: #edf5ff;
+  color: var(--ibm-blue);
+}
+
+.rarity-epic {
+  background-color: #edf5ff;
+  color: var(--ibm-blue);
+}
+
+.rarity-legendary {
+  background: var(--ibm-orange);
+  color: var(--text-primary);
+}
+
+.empty-state {
+  text-align: center;
+  padding: var(--spacing-2xl);
+  color: var(--text-secondary);
+  font-size: var(--font-size-lg);
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.timeline-event {
+  display: flex;
+  gap: var(--spacing-md);
+  position: relative;
+}
+
+.timeline-marker {
+  width: 16px;
+  height: 16px;
+  background-color: var(--ibm-blue);
+  flex-shrink: 0;
+  margin-top: 4px;
+  position: relative;
+}
+
+.timeline-marker::after {
+  content: '';
+  position: absolute;
+  top: 16px;
+  left: 7px;
+  width: 2px;
+  height: calc(100% + var(--spacing-lg));
+  background-color: var(--border-subtle);
+}
+
+.timeline-event:last-child .timeline-marker::after {
+  display: none;
+}
+
+.timeline-content {
+  flex: 1;
+  padding: var(--spacing-md);
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+}
+
+.timeline-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-xs);
+}
+
+.timeline-type {
+  font-weight: 600;
+  color: var(--ibm-blue);
+  text-transform: capitalize;
+}
+
+.timeline-xp {
+  font-weight: 400;
+  color: var(--ibm-blue);
+}
+
+.timeline-description {
+  margin-bottom: var(--spacing-xs);
+  color: var(--text-primary);
+}
+
+.timeline-date {
+  font-size: var(--font-size-xs);
+  color: var(--text-tertiary);
+}
+
+@media (max-width: 768px) {
+  .passport-screen {
+    padding: var(--spacing-md);
+  }
+
+  .passport-header,
+  .passport-hero,
+  .passport-level {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .passport-stats {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .bob-usage-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .badge-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .saved-skill-boost-item {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 520px) {
+  .passport-screen {
+    padding: var(--spacing-sm);
+  }
+
+  .passport-hero,
+  .passport-section,
+  .stat-box {
+    padding: var(--spacing-lg);
+  }
+
+  .passport-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline-event {
+    gap: var(--spacing-sm);
+  }
+
+  .timeline-content {
+    padding: var(--spacing-sm);
+  }
+
+  .timeline-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+  }
+}
+
+/* Made with Bob */

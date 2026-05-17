@@ -7,7 +7,12 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "capture:demo": "node scripts/capture-demo.mjs",
+    "deck:build": "node scripts/build-pitch-deck.mjs",
+    "record:demo": "node scripts/record-demo.mjs",
+    "voiceover:demo": "node scripts/add-voiceover.mjs",
+    "demo:final": "npm run record:demo && npm run voiceover:demo"
   },
   "dependencies": {
     "@react-three/drei": "^10.7.7",

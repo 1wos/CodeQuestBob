@@ -1,7 +1,12 @@
-# Bob Sessions
+# IBM Bob Session Reports
 
-Export IBM Bob IDE task session reports here for the final hackathon submission.
+This directory is reserved for exported IBM Bob task/session reports required by the IBM Bob Hackathon submission.
 
-Do not put fake reports here. Official reports must come from IBM Bob IDE task history export.
+Recommended exports for the final public repository:
 
-Before committing exported reports, check that they do not contain API keys, IAM tokens, or IBM Cloud credentials.
+- `session-01-repository-analysis`
+- `session-02-growth-quest-generation`
+- `session-03-implementation-review`
+- `session-04-skill-boost-radar`
+
+Do not commit API keys, raw credentials, or private workspace data in this folder.

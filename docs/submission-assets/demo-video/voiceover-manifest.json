@@ -1,0 +1,10 @@
+{
+  "provider": "azure-cli-auto",
+  "generatedAt": "2026-05-17T14:23:25.718Z",
+  "sourceVideo": "docs/submission-assets/demo-video/codequest-bob-demo.mp4",
+  "outputVideo": "docs/submission-assets/demo-video/codequest-bob-demo-voiceover.mp4",
+  "captions": "docs/submission-assets/demo-video/codequest-bob-demo-voiceover.srt",
+  "script": "docs/submission-assets/demo-video/narration-script.md",
+  "segmentCount": 8,
+  "durationSeconds": 51.52
+}
