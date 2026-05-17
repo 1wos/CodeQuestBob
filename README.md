@@ -30,6 +30,39 @@
   <img alt="Vercel" src="https://img.shields.io/badge/Deployed_on-Vercel-161616?style=flat-square" />
 </p>
 
+<table align="center">
+  <tr>
+    <td align="center" width="120">
+      <img src="docs/assets/ibm-icons/repo-source-code.svg" alt="Repository source code" width="48" /><br />
+      <sub>Repository</sub>
+    </td>
+    <td align="center" width="120">
+      <img src="docs/assets/ibm-icons/watsonx-ai.svg" alt="watsonx.ai" width="48" /><br />
+      <sub>watsonx.ai</sub>
+    </td>
+    <td align="center" width="120">
+      <img src="docs/assets/ibm-icons/cloudant.svg" alt="IBM Cloudant" width="48" /><br />
+      <sub>Cloudant</sub>
+    </td>
+    <td align="center" width="120">
+      <img src="docs/assets/ibm-icons/object-storage.svg" alt="IBM Cloud Object Storage" width="48" /><br />
+      <sub>Object Storage</sub>
+    </td>
+    <td align="center" width="120">
+      <img src="docs/assets/ibm-icons/watsonx-governance.svg" alt="watsonx.governance" width="48" /><br />
+      <sub>Governance</sub>
+    </td>
+    <td align="center" width="120">
+      <img src="docs/assets/ibm-icons/serverless-application.svg" alt="Serverless application" width="48" /><br />
+      <sub>API Proxy</sub>
+    </td>
+  </tr>
+</table>
+
+<p align="center">
+  <sub>IBM Cloud architecture icons are used for service storytelling. The visual direction follows IBM Design Language app icon conventions.</sub>
+</p>
+
 ## Overview
 
 CodeQuest Bob turns an unfamiliar GitHub repository into a guided growth journey: scan the repo, understand the structure, complete contribution quests, collect service stamps, and prepare a first pull request package.
@@ -111,7 +144,7 @@ API keys are never exposed to the browser. IBM service calls go through server-s
 
 ## Architecture
 
-The architecture diagram follows IBM Cloud architecture-stencil conventions, while the UI follows IBM Carbon-inspired interaction patterns.
+The architecture diagram follows IBM Cloud architecture-stencil conventions, while the UI follows IBM Carbon-inspired interaction patterns. Selected official IBM Cloud SVG assets are kept in [docs/assets/ibm-icons](docs/assets/ibm-icons/README.md) for README and article visuals.
 
 <p align="center">
   <img src="docs/architecture/codequest-bob-architecture.svg" alt="CodeQuest Bob architecture diagram" width="100%" />
@@ -199,8 +232,3 @@ Do not commit `.env.local`, IBM Cloud API keys, IAM tokens, downloaded service c
 - Browser-exposed variables should not contain IBM credentials.
 - Exported Bob reports are checked for sensitive tokens before committing.
 - `.env.local` and Vercel project metadata are ignored.
-
-## Portfolio Note
-
-This project is a compact example of AI-assisted product engineering: turning a vague hackathon prompt into a deployed developer tool with a clear user journey, live service integrations, 3D interaction, generated presentation assets, and traceable AI development history.
-
