@@ -63,6 +63,27 @@
   <sub>IBM Cloud architecture icons are used for service storytelling. The visual direction follows IBM Design Language app icon conventions.</sub>
 </p>
 
+<table align="center">
+  <tr>
+    <td align="center" width="170">
+      <img src="docs/assets/ibm-app-icons/watson-nlu.svg" alt="IBM Watson Natural Language Understanding" width="46" /><br />
+      <sub>Watson NLU</sub>
+    </td>
+    <td align="center" width="170">
+      <img src="docs/assets/ibm-app-icons/watson-tts.svg" alt="IBM Watson Text to Speech" width="46" /><br />
+      <sub>Text to Speech</sub>
+    </td>
+    <td align="center" width="170">
+      <img src="docs/assets/ibm-app-icons/watson-stt.svg" alt="IBM Watson Speech to Text" width="46" /><br />
+      <sub>Speech to Text</sub>
+    </td>
+  </tr>
+</table>
+
+<p align="center">
+  <sub>Watson service icons are sourced from the IBM Design Language App Icons Library.</sub>
+</p>
+
 ## Overview
 
 CodeQuest Bob turns an unfamiliar GitHub repository into a guided growth journey: scan the repo, understand the structure, complete contribution quests, collect service stamps, and prepare a first pull request package.
@@ -154,7 +175,7 @@ API keys are never exposed to the browser. IBM service calls go through server-s
 
 ## Architecture
 
-The architecture diagram follows IBM Cloud architecture-stencil conventions, while the UI follows IBM Carbon-inspired interaction patterns. Selected official IBM Cloud SVG assets are kept in [docs/assets/ibm-icons](docs/assets/ibm-icons/README.md) for README and article visuals.
+The architecture diagram follows IBM Cloud architecture-stencil conventions, while the UI follows IBM Carbon-inspired interaction patterns. Selected official IBM Cloud and Watson SVG assets are kept in [docs/assets/ibm-icons](docs/assets/ibm-icons/README.md) and [docs/assets/ibm-app-icons](docs/assets/ibm-app-icons/README.md) for README and article visuals.
 
 <p align="center">
   <img src="docs/architecture/codequest-bob-architecture.svg" alt="CodeQuest Bob architecture diagram" width="100%" />
