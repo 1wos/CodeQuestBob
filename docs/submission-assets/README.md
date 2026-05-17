@@ -4,6 +4,7 @@ This directory contains only the final material for the IBM Bob Hackathon submis
 
 - `codequest-bob-pitch-deck.pptx` - final slide presentation
 - `rendered/codequest-bob-pitch-deck.pdf` - final PDF copy of the presentation
+- `CodeQuestBob_Cover_Image.png` - final cover image for the submission page
 - `demo-video/codequest-bob-demo-voiceover.mp4` - final narrated demo video
 - `demo-video/codequest-bob-demo-voiceover.srt` - subtitle file for the narrated demo
 - `demo-video/narration-script.md` - voiceover script
