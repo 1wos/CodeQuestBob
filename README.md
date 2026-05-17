@@ -1,35 +1,56 @@
-# CodeQuest Bob
+<p align="center">
+  <img src="docs/submission-assets/CodeQuestBob_Cover_Image.png" alt="CodeQuest Bob cover" width="100%" />
+</p>
 
-> Others explain code. CodeQuest Bob grows developers.
+<h1 align="center">CodeQuest Bob</h1>
 
-CodeQuest Bob is a gamified developer onboarding platform built for the IBM Bob Hackathon. It turns an unfamiliar GitHub repository into a guided growth journey: scan the repo, understand the structure, complete contribution quests, collect service stamps, and prepare a first pull request package.
+<p align="center">
+  <strong>Others explain code. CodeQuest Bob grows developers.</strong>
+</p>
 
-The project was built as a solo hackathon MVP with IBM Bob as the development partner and IBM Cloud services powering live repository learning experiences.
+<p align="center">
+  A gamified developer onboarding platform built with IBM Bob and IBM Cloud services.
+</p>
 
-![CodeQuest Bob cover](docs/submission-assets/CodeQuestBob_Cover_Image.png)
+<p align="center">
+  <a href="https://codequest-bob.vercel.app"><strong>Live Demo</strong></a>
+  ·
+  <a href="docs/submission-assets/rendered/codequest-bob-pitch-deck.pdf"><strong>Pitch Deck</strong></a>
+  ·
+  <a href="docs/submission-assets/demo-video/codequest-bob-demo-voiceover.mp4"><strong>Demo Video</strong></a>
+  ·
+  <a href="bob_sessions/session-01-bob-task-history.md"><strong>IBM Bob Report</strong></a>
+</p>
 
-## Live Demo
+<p align="center">
+  <img alt="React" src="https://img.shields.io/badge/React-19-0f62fe?style=flat-square" />
+  <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-6-0f62fe?style=flat-square" />
+  <img alt="Three.js" src="https://img.shields.io/badge/Three.js-Orbit_Map-161616?style=flat-square" />
+  <img alt="IBM Bob" src="https://img.shields.io/badge/IBM_Bob-Development_Partner-0f62fe?style=flat-square" />
+  <img alt="Vercel" src="https://img.shields.io/badge/Deployed_on-Vercel-161616?style=flat-square" />
+</p>
 
-- Demo app: [https://codequest-bob.vercel.app](https://codequest-bob.vercel.app)
-- Public repository: [https://github.com/1wos/CodeQuestBob](https://github.com/1wos/CodeQuestBob)
-- Pitch deck: [docs/submission-assets/rendered/codequest-bob-pitch-deck.pdf](docs/submission-assets/rendered/codequest-bob-pitch-deck.pdf)
-- Demo video: [docs/submission-assets/demo-video/codequest-bob-demo-voiceover.mp4](docs/submission-assets/demo-video/codequest-bob-demo-voiceover.mp4)
+## Overview
 
-## Problem
+CodeQuest Bob turns an unfamiliar GitHub repository into a guided growth journey: scan the repo, understand the structure, complete contribution quests, collect service stamps, and prepare a first pull request package.
+
+The project was built as a solo hackathon MVP for the IBM Bob Hackathon. IBM Bob acted as the development partner, while IBM Cloud services powered live repository learning experiences.
+
+## Why It Matters
 
 New contributors often lose momentum before their first meaningful pull request. Repository structure, setup steps, contribution norms, and missing documentation create a cognitive wall. Existing AI tools can explain code, but they rarely turn that understanding into a measurable growth path for the developer.
 
 CodeQuest Bob reframes onboarding as a product experience:
 
-- make repository context visible
-- guide the contributor through concrete quests
-- recommend just-in-time learning resources
-- package the first PR workflow
-- preserve progress as portfolio-ready growth evidence
+| Contributor friction | CodeQuest Bob response |
+| --- | --- |
+| "Where do I start?" | Repository intake and live GitHub scan |
+| "What should I learn first?" | Skill Boost Radar with IBM NLU and Granite reasoning |
+| "What can I safely change?" | Step-by-step growth quests |
+| "How do I prepare a PR?" | First PR Package with commands, notes, and checklist |
+| "How do I show progress?" | Developer Growth Passport and Service Stamps |
 
-## Solution
-
-CodeQuest Bob converts repository context into a guided developer growth journey.
+## Product Flow
 
 ```text
 Repository Intake
@@ -40,68 +61,34 @@ Repository Intake
   -> Developer Growth Passport
 ```
 
-The core product idea is simple: the developer should not only understand the repo. They should leave with confidence, evidence, and a next action.
+The core product idea is simple: the developer should not only understand the repository. They should leave with confidence, evidence, and a next action.
 
-## Key Features
+## Highlights
 
-### Live Repository Intake
-
-Users can paste a public GitHub repository URL and refresh repository metadata through a server-side API route. The app surfaces repository name, description, default branch, language breakdown, root files, and contribution context.
-
-### Growth Quest Map
-
-The onboarding path is represented as a horizontal quest system:
-
-1. Setup Quest
-2. Explore Quest
-3. Improve Quest
-4. First PR Quest
-
-Each quest has level, difficulty, estimated time, XP, objectives, and a completion path. The quest cards are designed to feel like professional developer achievements rather than decorative game UI.
-
-### 3D Repository Orbit Map
-
-The quest map includes a React Three Fiber / Three.js orbit visualization that represents the repository as an interactive spatial system. It gives the demo a memorable 2.5D/3D layer while keeping the main workflow practical.
-
-### Skill Boost Radar
-
-Skill Boost Radar pulls live developer learning signals from GitHub Search and Hugging Face, then uses IBM Natural Language Understanding and watsonx.ai / IBM Granite to translate those signals into quest-specific learning recommendations.
-
-Saved recommendations appear in the Developer Growth Passport.
-
-### IBM Speech Briefing Loop
-
-Quest objectives can be converted into an audio onboarding briefing through IBM Text to Speech and verified through IBM Speech to Text. This demonstrates speech UX inside the product flow, not only as a standalone API check.
-
-### First PR Package
-
-The final quest prepares a contribution-ready package:
-
-- starter task
-- target files
-- commands to run
-- PR title draft
-- PR description draft
-- reviewer notes
-- completion checklist
-
-### Developer Growth Passport
-
-The passport tracks XP, completed quests, saved learning resources, activity timeline, AI analysis activity, and service stamps. It is designed as a lightweight portfolio artifact for developer growth.
+| Feature | What it does |
+| --- | --- |
+| Live Repository Intake | Reads public GitHub repository metadata through a server-side API route |
+| Growth Quest Map | Guides the user through setup, exploration, improvement, and first PR readiness |
+| 3D Repository Orbit Map | Uses React Three Fiber and Three.js to make repository structure memorable |
+| Skill Boost Radar | Converts GitHub and Hugging Face signals into quest-specific learning recommendations |
+| IBM Speech Briefing Loop | Generates audio quest briefings with IBM Text to Speech and verifies them with Speech to Text |
+| First PR Package | Produces a contribution-ready package with target files, commands, PR copy, and reviewer notes |
+| Developer Growth Passport | Tracks XP, saved boosts, service stamps, activity, and AI analysis history |
 
 ## IBM Bob Usage
 
-IBM Bob was used as the primary AI development partner throughout the project. Bob helped with:
+IBM Bob was used as the primary AI development partner throughout the project.
 
-- repository analysis and MVP planning
-- React + TypeScript architecture decisions
-- quest system and growth passport design
-- IBM ecosystem integration planning
-- UI/UX review and copy refinement
-- implementation review and submission readiness
-- final polish tasks for the hackathon demo
+| Bob contribution | Evidence |
+| --- | --- |
+| Repository analysis and MVP planning | [Exported Bob task history](bob_sessions/session-01-bob-task-history.md) |
+| React + TypeScript architecture decisions | App shell, domain models, modular screens |
+| Quest system and growth passport design | Quest data model, Service Stamps, Passport screen |
+| IBM ecosystem integration planning | Vercel API proxy and IBM service routes |
+| UI/UX review and copy refinement | Carbon-inspired polish, quest card refinement |
+| Submission readiness | Pitch deck, demo video, README, deployed demo |
 
-Exported IBM Bob task history is included for judging and portfolio transparency:
+The public repository includes the exported IBM Bob report required for hackathon review:
 
 ```text
 bob_sessions/
@@ -124,7 +111,11 @@ API keys are never exposed to the browser. IBM service calls go through server-s
 
 ## Architecture
 
-![CodeQuest Bob architecture](docs/architecture/codequest-bob-architecture.svg)
+The architecture diagram follows IBM Cloud architecture-stencil conventions, while the UI follows IBM Carbon-inspired interaction patterns.
+
+<p align="center">
+  <img src="docs/architecture/codequest-bob-architecture.svg" alt="CodeQuest Bob architecture diagram" width="100%" />
+</p>
 
 ```text
 React + TypeScript client
@@ -138,19 +129,15 @@ More architecture notes are available in [docs/architecture/README.md](docs/arch
 
 ## Tech Stack
 
-- React
-- TypeScript
-- Vite
-- Three.js
-- React Three Fiber
-- Drei
-- Lucide React
-- Vercel
-- IBM watsonx.ai / IBM Granite
-- IBM Watson Natural Language Understanding
-- IBM Watson Text to Speech
-- IBM Watson Speech to Text
-- IBM Cloudant-ready API route
+| Layer | Tools |
+| --- | --- |
+| Frontend | React, TypeScript, Vite |
+| 3D / spatial UI | Three.js, React Three Fiber, Drei |
+| UI system | IBM Carbon-inspired CSS, Lucide React |
+| AI / language | IBM Bob, watsonx.ai / IBM Granite, Watson NLU |
+| Speech | Watson Text to Speech, Watson Speech to Text |
+| Persistence path | IBM Cloudant-ready server route |
+| Deployment | Vercel, serverless API proxy |
 
 ## Repository Structure
 
@@ -171,6 +158,17 @@ api/                    Vercel serverless API routes
 bob_sessions/           Exported IBM Bob task history
 docs/                   Product brief, architecture, cloud setup, submission assets
 ```
+
+## Submission Assets
+
+| Asset | Path |
+| --- | --- |
+| Cover image | [docs/submission-assets/CodeQuestBob_Cover_Image.png](docs/submission-assets/CodeQuestBob_Cover_Image.png) |
+| Pitch deck PDF | [docs/submission-assets/rendered/codequest-bob-pitch-deck.pdf](docs/submission-assets/rendered/codequest-bob-pitch-deck.pdf) |
+| Editable deck PPTX | [docs/submission-assets/codequest-bob-pitch-deck.pptx](docs/submission-assets/codequest-bob-pitch-deck.pptx) |
+| Demo video | [docs/submission-assets/demo-video/codequest-bob-demo-voiceover.mp4](docs/submission-assets/demo-video/codequest-bob-demo-voiceover.mp4) |
+| Demo script | [docs/submission-assets/demo-video-script.md](docs/submission-assets/demo-video-script.md) |
+| IBM Bob report | [bob_sessions/session-01-bob-task-history.md](bob_sessions/session-01-bob-task-history.md) |
 
 ## Local Development
 
@@ -201,17 +199,6 @@ Do not commit `.env.local`, IBM Cloud API keys, IAM tokens, downloaded service c
 - Browser-exposed variables should not contain IBM credentials.
 - Exported Bob reports are checked for sensitive tokens before committing.
 - `.env.local` and Vercel project metadata are ignored.
-
-## Submission Assets
-
-Final hackathon assets live in [docs/submission-assets](docs/submission-assets):
-
-- cover image
-- pitch deck PDF
-- editable pitch deck PPTX
-- demo video
-- demo script
-- requirements checklist
 
 ## Portfolio Note
 
