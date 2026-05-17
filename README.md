@@ -178,7 +178,7 @@ API keys are never exposed to the browser. IBM service calls go through server-s
 The architecture diagram follows IBM Cloud architecture-stencil conventions, while the UI follows IBM Carbon-inspired interaction patterns. Selected official IBM Cloud and Watson SVG assets are kept in [docs/assets/ibm-icons](docs/assets/ibm-icons/README.md) and [docs/assets/ibm-app-icons](docs/assets/ibm-app-icons/README.md) for README and article visuals.
 
 <p align="center">
-  <img src="docs/architecture/codequest-bob-architecture.svg" alt="CodeQuest Bob architecture diagram" width="100%" />
+  <img src="docs/architecture/codequest-bob-architecture-clean.svg" alt="CodeQuest Bob architecture diagram" width="100%" />
 </p>
 
 ```text

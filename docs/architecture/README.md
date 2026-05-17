@@ -4,7 +4,9 @@ This folder contains slide-ready architecture assets for the IBM Bob Hackathon s
 
 ## Files
 
-- `codequest-bob-architecture.svg` - 16:9 portfolio-ready architecture graphic with embedded IBM/Watson icons.
+- `codequest-bob-architecture-clean.svg` - portfolio-ready architecture graphic with embedded IBM/Watson icons.
+- `../screenshots/codequest-bob-architecture-clean.png` - Medium/README-friendly rendered PNG.
+- `codequest-bob-architecture.svg` - editable source variant.
 - `codequest-bob-architecture.mmd` - Lightweight Mermaid reference for the underlying system flow.
 
 ## Diagram Story
