@@ -21,6 +21,12 @@ ibm-credentials.json
 *.token
 
 # Generated submission intermediates
+docs/submission-assets/codequest-bob-pitch-deck.html
+docs/submission-assets/screenshots/
+docs/submission-assets/demo-video/codequest-bob-demo.mp4
+docs/submission-assets/demo-video/codequest-bob-demo.webm
+docs/submission-assets/demo-video/recording-manifest.json
+docs/submission-assets/demo-video/voiceover-manifest.json
 docs/submission-assets/demo-video/raw/
 docs/submission-assets/demo-video/frames/
 docs/submission-assets/demo-video/keyframes/

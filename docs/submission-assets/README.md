@@ -1,38 +1,26 @@
 # CodeQuest Bob Submission Assets
 
-This directory contains generated material for the IBM Bob Hackathon submission:
+This directory contains only the final material for the IBM Bob Hackathon submission.
 
-- `screenshots/` - automated app screenshots for the demo video and slide deck
-- `codequest-bob-pitch-deck.pptx` - generated pitch deck
-- `demo-video-script.md` - short recording script for a 5-minute video
+- `codequest-bob-pitch-deck.pptx` - final slide presentation
+- `rendered/codequest-bob-pitch-deck.pdf` - final PDF copy of the presentation
+- `demo-video/codequest-bob-demo-voiceover.mp4` - final narrated demo video
+- `demo-video/codequest-bob-demo-voiceover.srt` - subtitle file for the narrated demo
+- `demo-video/narration-script.md` - voiceover script
+- `demo-video-script.md` - short demo outline
 
-## Generate Screenshots
+Intermediate files such as raw browser recordings, screenshot frames, deck source HTML,
+and contact sheets are intentionally ignored so the public repository stays focused on
+the app source code and final submission artifacts.
 
-Start the app first:
-
-```bash
-npm run dev
-```
-
-Then run:
-
-```bash
-npm run capture:demo
-```
-
-If Playwright is not installed locally, run the script with the bundled Codex runtime or install Playwright as a dev dependency.
-
-## Generate Pitch Deck
+## Regenerate Demo Video
 
 ```bash
-npm run deck:build
+npm run demo:final
 ```
 
-The deck automatically uses screenshots from `screenshots/` when they exist.
-It uses Pretendard typography and a Carbon-inspired visual system: white canvas,
-light gray surfaces, charcoal text, square geometry, 1px hairlines, and IBM Blue
-as the only accent.
+This runs the browser demo automation and then adds the Azure Speech voiceover. If Azure
+Speech is unavailable, the voiceover script falls back to the local macOS voice system.
 
-The current deck workflow borrows the practical idea from `slides-grab`: keep
-screenshots and rendered review artifacts close to the deck, so the pitch can be
-rebuilt quickly after product changes.
+The final pitch deck and PDF are committed as final artifacts and are not rebuilt during
+normal app development.
