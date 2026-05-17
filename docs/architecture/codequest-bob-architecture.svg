@@ -26,6 +26,7 @@
       .line-blue { stroke: #0f62fe; stroke-width: 2; fill: none; marker-end: url(#arrow-blue); }
       .line-gray { stroke: #6f6f6f; stroke-width: 1.5; fill: none; marker-end: url(#arrow-gray); }
       .line-soft { stroke: #c6c6c6; stroke-width: 1; fill: none; }
+      .label-tag-gray { fill: #ffffff; stroke: #e0e0e0; stroke-width: 1; }
     </style>
   </defs>
 
@@ -117,12 +118,11 @@
   <path class="line-blue" d="M1160 560 L1230 560" />
   <path class="line-gray" d="M995 415 L995 460" />
   <path class="line-gray" d="M195 460 L195 268" />
-  <path class="line-gray" d="M310 550 L370 550" />
-  <path class="line-gray" d="M760 355 L760 550 L370 550" />
+  <path class="line-gray" d="M310 600 L370 600" />
+  <path class="line-gray" d="M760 355 L760 460" />
   <path class="line-soft" d="M1230 440 L1160 550" />
   <path class="line-soft" d="M1230 650 L1160 610" />
 
-  <text class="tiny blue" x="790" y="232">repository and quest actions</text>
-  <text class="tiny blue" x="1175" y="247">AI, language, speech, storage</text>
-  <text class="tiny" x="1012" y="448">saved skill boosts</text>
+  <rect class="label-tag-gray" x="1010" y="436" width="112" height="22" />
+  <text class="tiny" x="1018" y="452">saved boosts</text>
 </svg>
