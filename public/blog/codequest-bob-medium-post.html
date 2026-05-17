@@ -1,0 +1,515 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CodeQuest Bob: Turning GitHub Repositories Into Developer Quests with IBM Bob</title>
+    <meta
+      name="description"
+      content="A solo IBM Bob Hackathon build about repository onboarding, 3D UI, IBM Cloud services, and learning to give AI better product constraints."
+    />
+    <meta property="og:title" content="CodeQuest Bob: Turning GitHub Repositories Into Developer Quests with IBM Bob" />
+    <meta
+      property="og:description"
+      content="A solo IBM Bob Hackathon build about repository onboarding, 3D UI, IBM Cloud services, and learning to give AI better product constraints."
+    />
+    <meta property="og:image" content="https://github.com/1wos/CodeQuestBob/raw/main/docs/submission-assets/CodeQuestBob_Cover_Image.png" />
+    <meta property="og:type" content="article" />
+    <style>
+      :root {
+        color-scheme: light;
+        --ink: #161616;
+        --muted: #525252;
+        --subtle: #6f6f6f;
+        --line: #e0e0e0;
+        --surface: #f4f4f4;
+        --blue: #0f62fe;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family:
+          Pretendard,
+          "IBM Plex Sans",
+          "Helvetica Neue",
+          Arial,
+          sans-serif;
+        color: var(--ink);
+        background: #fff;
+        letter-spacing: 0.16px;
+        line-height: 1.62;
+      }
+
+      article {
+        width: min(760px, calc(100% - 40px));
+        margin: 0 auto;
+        padding: 56px 0 80px;
+      }
+
+      h1 {
+        margin: 0 0 24px;
+        font-size: clamp(36px, 7vw, 64px);
+        line-height: 1.08;
+        font-weight: 400;
+        letter-spacing: -0.02em;
+      }
+
+      h2 {
+        margin: 56px 0 16px;
+        font-size: clamp(24px, 4vw, 34px);
+        line-height: 1.2;
+        font-weight: 500;
+        letter-spacing: 0;
+      }
+
+      p,
+      li {
+        font-size: 18px;
+      }
+
+      p {
+        margin: 0 0 20px;
+      }
+
+      a {
+        color: var(--blue);
+        text-decoration-thickness: 1px;
+        text-underline-offset: 3px;
+      }
+
+      strong {
+        font-weight: 650;
+      }
+
+      ul,
+      ol {
+        padding-left: 24px;
+        margin: 0 0 24px;
+      }
+
+      li + li {
+        margin-top: 8px;
+      }
+
+      blockquote {
+        margin: 32px 0;
+        padding: 24px 28px;
+        background: var(--surface);
+        border: 1px solid var(--line);
+        font-size: 22px;
+        line-height: 1.45;
+      }
+
+      blockquote p {
+        margin: 0;
+        font-size: inherit;
+      }
+
+      figure {
+        margin: 36px 0;
+      }
+
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+        border: 1px solid var(--line);
+      }
+
+      figcaption {
+        margin-top: 10px;
+        color: var(--subtle);
+        font-size: 14px;
+        line-height: 1.45;
+      }
+
+      .dek {
+        color: var(--muted);
+        font-size: 21px;
+        line-height: 1.45;
+        margin-bottom: 32px;
+      }
+
+      .lead {
+        font-size: 22px;
+        line-height: 1.5;
+        color: var(--ink);
+      }
+
+      .project-link {
+        margin-top: 28px;
+        padding: 20px;
+        border: 1px solid var(--line);
+        background: var(--surface);
+      }
+
+      @media (max-width: 640px) {
+        article {
+          width: min(100% - 28px, 760px);
+          padding-top: 36px;
+        }
+
+        p,
+        li {
+          font-size: 16px;
+        }
+
+        .lead,
+        .dek {
+          font-size: 18px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <article>
+      <h1>CodeQuest Bob: Turning GitHub Repositories Into Developer Quests with IBM Bob</h1>
+
+      <figure>
+        <img
+          src="https://github.com/1wos/CodeQuestBob/raw/main/docs/submission-assets/CodeQuestBob_Cover_Image.png"
+          alt="CodeQuest Bob cover image"
+        />
+        <figcaption>CodeQuest Bob: Others explain code. CodeQuest Bob grows developers.</figcaption>
+      </figure>
+
+      <p class="lead"><strong>Solo, out of 5,627 participants. With roughly one real day to build.</strong></p>
+
+      <p>
+        In May 2026, I joined the <strong>IBM Bob Hackathon</strong> hosted on lablab.ai. The event ended with 1,679 teams and
+        502 AI applications. I joined solo, and because I had a research group meeting on Saturday, the amount of focused
+        development time I actually had was closer to one day than forty-eight hours.
+      </p>
+
+      <p>
+        Inside that window, I needed to ship a React application, connect IBM Cloud services, build a 3D interaction layer,
+        prepare a demo video, create a pitch deck, deploy the app, and polish the README enough for judges and future portfolio
+        readers.
+      </p>
+
+      <p>This is the story of how I built <strong>CodeQuest Bob</strong>, and what I learned about using an AI development partner in a real product sprint.</p>
+
+      <h2>The prompt that shaped the hackathon</h2>
+
+      <p>The hackathon tagline was simple:</p>
+
+      <blockquote><p>Your repo. Your rules. AI as your dev partner.</p></blockquote>
+
+      <p>
+        The goal was not just to build another AI app. The challenge was to use <strong>IBM Bob</strong> as a real development
+        partner and create something that improves how software gets built.
+      </p>
+
+      <p>
+        The official theme was <strong>"Turn idea into impact faster."</strong> Participants were encouraged to solve everyday
+        developer problems: getting up to speed on unfamiliar codebases, generating documentation or tests, reducing repetitive
+        work, and helping builders move with more confidence.
+      </p>
+
+      <p>
+        One requirement stood out: every submission had to clearly show how IBM Bob was meaningfully used in the solution. If Bob
+        was only mentioned as a label, the project could be disqualified. That constraint made the project much more interesting.
+        The process mattered, not just the final demo.
+      </p>
+
+      <h2>Why I decided to build solo</h2>
+
+      <p>I had two reasons for joining.</p>
+
+      <p>
+        First, I wanted to try IBM Bob and the broader IBM AI ecosystem for myself. I had not seen many Korean writeups about
+        using IBM Bob, watsonx, or Watson APIs inside an actual product build, and I had been curious about that stack for a
+        while.
+      </p>
+
+      <p>
+        Second, I wanted to build something that could live beyond the hackathon. I did not want a disposable MVP. I wanted a
+        project that could later explain what problem I defined, what product decisions I made, what UX I designed, and how I
+        used AI tools in a real workflow.
+      </p>
+
+      <p>
+        The platform supported team formation, but when I checked available participants by time zone, I could not easily find
+        people aligned with KST. Given the deadline, solo execution felt more realistic than coordination across time zones. So I
+        decided to move fast and finish it alone.
+      </p>
+
+      <h2>The unusual submission rule: show the AI process</h2>
+
+      <p>The provided <strong>IBM Bob Hackathon Guide</strong> made two things clear.</p>
+
+      <p>
+        First, IBM Bob IDE had to be central to the project. We could use other tools and frameworks, but the submission needed
+        to demonstrate real use of Bob inside the development workflow.
+      </p>
+
+      <p>
+        Second, we had to export the <strong>IBM Bob task session report</strong> and include it in the public GitHub repository.
+        That was different from many hackathons, where the final code and demo are usually enough. Here, the AI-assisted
+        development history became part of the deliverable.
+      </p>
+
+      <p>I liked that. It made the project feel less like "AI wrote some code" and more like "AI participated in the engineering process."</p>
+
+      <p>The hackathon also gave access to several IBM Cloud resources. I explored or configured:</p>
+
+      <ul>
+        <li>IBM Bob</li>
+        <li>watsonx.ai Studio and Watson Machine Learning</li>
+        <li>Watson Natural Language Understanding</li>
+        <li>Watson Text to Speech</li>
+        <li>Watson Speech to Text</li>
+        <li>watsonx.governance</li>
+        <li>watsonx Orchestrate</li>
+        <li>IBM Cloud Object Storage</li>
+        <li>IBM Cloudant</li>
+      </ul>
+
+      <p>
+        It was not realistic to use every service deeply in a one-day build, so I prioritized the services that could become part
+        of the actual user experience. Watson NLU powered learning signal extraction. Watson Text to Speech and Speech to Text
+        supported the briefing loop. Cloudant was designed as a future persistence layer for saved learning resources. governance
+        and Orchestrate stayed closer to the architecture layer for this version.
+      </p>
+
+      <p>
+        The service I most wish I had more time for was <strong>watsonx Orchestrate</strong>. My understanding is that it can
+        connect AI agents and business applications into automated workflows. In a future version of CodeQuest Bob, it could help
+        create GitHub issues after repository analysis, assign onboarding tasks to contributors, or generate team-level growth
+        reports.
+      </p>
+
+      <h2>What I built: CodeQuest Bob</h2>
+
+      <p>The product idea became:</p>
+
+      <blockquote><p>Others explain code. CodeQuest Bob grows developers.</p></blockquote>
+
+      <p>
+        Many code analysis tools focus on explaining what code does. But for a new contributor, the hardest part is often not the
+        explanation itself. The harder questions are:
+      </p>
+
+      <ul>
+        <li>Where should I start?</li>
+        <li>Which files should I read first?</li>
+        <li>What would be a safe first contribution?</li>
+        <li>Am I ready to open a pull request?</li>
+      </ul>
+
+      <p>CodeQuest Bob turns an unfamiliar GitHub repository into a <strong>gamified developer growth journey</strong>.</p>
+
+      <p>
+        A user enters a repository URL. The app analyzes the repo structure, turns the onboarding path into quests, recommends
+        learning resources, and eventually generates a package that helps the user prepare a first pull request.
+      </p>
+
+      <p>The user flow looks like this:</p>
+
+      <ol>
+        <li><strong>Repository Intake</strong>: enter a GitHub repository URL.</li>
+        <li><strong>Live GitHub Scan</strong>: analyze repository metadata and structure through a server-side API route.</li>
+        <li><strong>Growth Quest Map</strong>: move through Setup, Explore, Improve, and First PR quests.</li>
+        <li><strong>Quest Detail + Skill Boost Radar</strong>: follow quest objectives and receive GitHub/Hugging Face learning recommendations.</li>
+        <li><strong>First PR Package</strong>: collect target files, commands, PR copy, reviewer notes, and a checklist.</li>
+        <li><strong>Developer Growth Passport</strong>: keep completed quests, saved Skill Boosts, Service Stamps, and AI analysis activity in one place.</li>
+      </ol>
+
+      <h2>I wanted the repository to feel spatial</h2>
+
+      <p>
+        From the beginning, I wanted a 3D-feeling interface. I did not want another flat dashboard where the repository appears
+        only as a file tree or metrics table. I wanted the user to feel like they were entering a codebase and moving through it.
+      </p>
+
+      <figure>
+        <img
+          src="https://github.com/1wos/CodeQuestBob/raw/main/docs/screenshots/codequest-bob-repository-orbit.png"
+          alt="3D Repository Orbit Map"
+        />
+        <figcaption>3D Repository Orbit Map: the repository becomes a growth path instead of just a file tree.</figcaption>
+      </figure>
+
+      <p>That became the <strong>3D Repository Orbit Map</strong>.</p>
+
+      <p>
+        The repository core sits at the center, while Setup Quest, Explore Quest, Improve Quest, and First PR Quest orbit around
+        it. The point was not decoration. It was a UX metaphor for onboarding: helping a new contributor understand where they
+        are, where they can go next, and how each step builds toward contribution readiness.
+      </p>
+
+      <h2>How IBM services fit into the product</h2>
+
+      <p>One personal goal for this hackathon was to actually touch the IBM ecosystem, not just put the logos in a slide.</p>
+
+      <p>In CodeQuest Bob, the services were mapped to product behavior:</p>
+
+      <ul>
+        <li><strong>IBM Bob</strong>: repository reasoning, implementation planning, code structure review, UI/UX critique, and submission preparation.</li>
+        <li><strong>watsonx.ai / IBM Granite</strong>: recommendation reasoning and learning direction inside Skill Boost Radar.</li>
+        <li><strong>Watson Natural Language Understanding</strong>: keyword and learning-signal extraction from GitHub and Hugging Face resources.</li>
+        <li><strong>Watson Text to Speech</strong>: audio quest briefings.</li>
+        <li><strong>Watson Speech to Text</strong>: transcript verification for generated briefings.</li>
+        <li><strong>IBM Cloudant</strong>: designed as the persistence path for saved Skill Boosts.</li>
+      </ul>
+
+      <p>
+        IBM Bob offered several working modes, including Plan, Code, Advanced, Ask, and Orchestrator. I used Plan mode to shape
+        the product direction and MVP scope, Code mode to build out the React/TypeScript structure, and Ask mode to check
+        requirements and clarify implementation choices. At the end, I exported the Bob task history and included it in the GitHub
+        repository.
+      </p>
+
+      <figure>
+        <img
+          src="https://github.com/1wos/CodeQuestBob/raw/main/docs/screenshots/codequest-bob-architecture.png"
+          alt="IBM Cloud architecture for CodeQuest Bob"
+        />
+        <figcaption>Architecture overview: React client, Vercel API proxy, IBM Cloud services, and GitHub repository context.</figcaption>
+      </figure>
+
+      <p>
+        The most important design choice was not "use many IBM services." It was making sure each service had a visible role in
+        the user journey. So instead of hiding the integrations in a technical appendix, I connected them to actual features:
+        Skill Boost Radar, Speech Briefing Loop, Developer Growth Passport, and the exported Bob session report.
+      </p>
+
+      <h2>Not code explanation, but contribution readiness</h2>
+
+      <p>The main differentiation I cared about was <strong>contribution readiness</strong>.</p>
+
+      <p>
+        I did not want the app to stop at repository summary. CodeQuest Bob needed to help a beginner move from "I do not know
+        where to start" to "I can prepare a small, reviewable contribution."
+      </p>
+
+      <p>That led to five core features.</p>
+
+      <p>
+        <strong>Skill Boost Radar</strong> recommends learning resources related to the current quest. Watson NLU extracts keywords
+        and signals from resources, while watsonx.ai / Granite explains why a resource is relevant to the user's current step.
+      </p>
+
+      <p>
+        <strong>First PR Package</strong> prepares the practical pieces of a first contribution: target files, commands to run, PR
+        title and description, reviewer notes, and a completion checklist.
+      </p>
+
+      <p>
+        <strong>Developer Growth Passport</strong> collects completed quests, saved learning resources, earned stamps, and AI
+        analysis activity. I wanted it to feel like a growth record, not just a progress bar.
+      </p>
+
+      <p>
+        <strong>Service Stamps</strong> make IBM service usage feel like GitHub achievements. The user can unlock stamps such as
+        Repo Scanner, Granite Coach, NLU Scout, Speech Loop, Skill Radar, First PR Ready, and Passport Keeper. I kept the visual
+        style restrained so it stayed closer to IBM Carbon than a toy-like game UI.
+      </p>
+
+      <p>
+        <strong>3D Orbit Map</strong> turns repository onboarding into a spatial progression path. It is the screen I remember
+        most from the project.
+      </p>
+
+      <p>
+        In short, CodeQuest Bob is not trying to be "a tool that explains this code." It is trying to be "a tool that helps you
+        become someone who can contribute to this repository."
+      </p>
+
+      <h2>The product constraints I kept repeating</h2>
+
+      <p>During the build, I kept returning to three constraints:</p>
+
+      <p>
+        It should not feel like a disposable demo. It should feel like the beginning of a real SaaS product. IBM Bob usage should
+        be visible through the workflow, not only claimed in text. Developer onboarding should feel like growth, not homework.
+      </p>
+
+      <p>That is why the interface uses quests, a passport, service stamps, and a 3D map instead of a standard admin dashboard.</p>
+
+      <p>
+        At the same time, I did not want the product to become too cute. IBM has a strong enterprise design language, so I
+        borrowed from IBM Carbon: white surfaces, thin lines, restrained use of IBM Blue, square geometry, and clear typography.
+        On top of that, I added small GitHub-achievement-like moments to make the experience more memorable.
+      </p>
+
+      <h2>What IBM Bob taught me about AI-assisted engineering</h2>
+
+      <p>
+        The best part of using IBM Bob was that it could work with project context. It was not just producing isolated code
+        snippets. It could inspect the file structure, understand the current implementation direction, and suggest the next
+        engineering step.
+      </p>
+
+      <p>But it was not magic.</p>
+
+      <p>
+        During UI polishing, I noticed some generic AI design patterns trying to sneak back in: unnecessary accent borders,
+        decorative cards, too many status badges, or copy that sounded more like an internal implementation note than a real
+        product. I had to keep tightening the design direction.
+      </p>
+
+      <p>
+        I also saw cases where a later task partially reverted a UI or copy decision that had already been refined. In the second
+        half of the project, I became much more careful about reviewing diffs and explicitly stating which design decisions had to
+        remain unchanged.
+      </p>
+
+      <p>That was the biggest lesson for me:</p>
+
+      <p>
+        AI development tools are powerful, but the quality of the result depends heavily on the quality of the constraints.
+      </p>
+
+      <p>
+        It is not enough to ask for a good output. You have to define what "good" means: the design system, the product tone, the
+        user flow, the technical boundaries, and the things the AI should not do.
+      </p>
+
+      <h2>Final submission</h2>
+
+      <div class="project-link">
+        <p><strong>GitHub Repository</strong>: <a href="https://github.com/1wos/CodeQuestBob">github.com/1wos/CodeQuestBob</a></p>
+      </div>
+
+      <p>The live demo, demo video, pitch deck, and exported IBM Bob task report are all linked or included from the repository README.</p>
+
+      <h2>Closing thoughts</h2>
+
+      <p>
+        This hackathon felt less like "build an AI app" and more like an experiment in what changes when AI becomes part of the
+        product engineering process.
+      </p>
+
+      <p>
+        IBM Bob did not replace product judgment. If anything, it made product judgment more important. I still had to decide the
+        problem, the UX direction, the visual constraints, the feature scope, and the final story.
+      </p>
+
+      <p>
+        But with the right constraints, it helped me move from an idea to a deployed product in a very short amount of time:
+        repository analysis, IBM Cloud integration, 3D UI, demo video, pitch deck, public deployment, README polish, and exported
+        AI development history.
+      </p>
+
+      <p>
+        CodeQuest Bob is still a prototype, but it is a prototype I want to keep growing. The next version could add GitHub issue
+        generation, team onboarding reports, Orchestrate-based workflow automation, and Cloudant-backed persistence for saved
+        learning resources.
+      </p>
+
+      <p>The sentence I kept at the end of the project was this:</p>
+
+      <blockquote>
+        <p>
+          A good AI development tool does not just write code for you.<br />
+          It helps you ask better questions, set better constraints, and make better product decisions.
+        </p>
+      </blockquote>
+    </article>
+  </body>
+</html>
