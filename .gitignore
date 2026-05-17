@@ -46,3 +46,4 @@ docs/submission-assets/rendered/pages/
 *.njsproj
 *.sln
 *.sw?
+.vercel

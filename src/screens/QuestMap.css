@@ -52,9 +52,9 @@
   width: min(100%, 1120px);
   display: flex;
   align-items: center;
-  gap: var(--spacing-xl);
+  gap: var(--spacing-lg);
   justify-content: flex-start;
-  padding: var(--spacing-sm) 0 var(--spacing-lg);
+  padding: var(--spacing-md) 0 var(--spacing-lg);
   overflow-x: auto;
   overflow-y: hidden;
   scroll-snap-type: x mandatory;
@@ -79,15 +79,17 @@
   flex: 0 0 auto;
   display: flex;
   align-items: center;
-  gap: var(--spacing-xl);
+  gap: var(--spacing-lg);
   position: relative;
   scroll-snap-align: start;
 }
 
 .quest-card {
-  width: 270px;
-  min-height: 18.5rem;
-  padding: var(--spacing-xl);
+  width: 252px;
+  min-height: 19rem;
+  display: flex;
+  flex-direction: column;
+  padding: var(--spacing-lg);
   background-color: var(--bg-primary);
   border: 1px solid var(--border-subtle);
   color: var(--text-primary);
@@ -104,10 +106,32 @@
   overflow: hidden;
 }
 
+.quest-card::after {
+  content: '';
+  position: absolute;
+  right: var(--spacing-lg);
+  bottom: var(--spacing-lg);
+  width: 0.7rem;
+  height: 0.7rem;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  transform: rotate(45deg);
+  transition:
+    background var(--transition-fast),
+    border-color var(--transition-fast),
+    transform var(--transition-fast);
+}
+
 .quest-card:hover {
   background: #f8fbff;
   border-color: var(--ibm-blue) !important;
   transform: translateY(-3px);
+}
+
+.quest-card:hover::after {
+  background: #d0e2ff;
+  border-color: var(--ibm-blue);
+  transform: rotate(45deg) scale(1.15);
 }
 
 .quest-card:focus-visible {
@@ -134,10 +158,19 @@
   text-transform: none;
 }
 
+.quest-card-topline {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--spacing-sm);
+  min-height: 2rem;
+  margin-bottom: var(--spacing-lg);
+}
+
 .quest-level {
-  position: absolute;
-  top: var(--spacing-md);
-  right: var(--spacing-md);
+  display: inline-flex;
+  align-items: center;
+  min-height: 1.75rem;
   padding: var(--spacing-xs) var(--spacing-sm);
   background-color: var(--bg-secondary);
   border: 1px solid var(--border-subtle);
@@ -158,6 +191,14 @@
   transform: translateY(-1px);
 }
 
+.quest-card-visual {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+}
+
 .quest-icon {
   display: inline-grid;
   width: 3.75rem;
@@ -167,7 +208,7 @@
   background: var(--bg-secondary);
   color: var(--ibm-blue);
   text-align: center;
-  margin-bottom: var(--spacing-md);
+  margin-bottom: 0;
   overflow: hidden;
   transition:
     background var(--transition-fast),
@@ -186,6 +227,22 @@
   height: 2.25rem;
 }
 
+.quest-stage-number {
+  color: #d0e2ff;
+  font-size: clamp(2.6rem, 5vw, 4.2rem);
+  font-weight: 300;
+  line-height: 0.8;
+  letter-spacing: 0;
+  transition:
+    color var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.quest-card:hover .quest-stage-number {
+  color: var(--ibm-blue);
+  transform: translateY(-2px);
+}
+
 .quest-title {
   font-size: var(--font-size-xl);
   font-weight: 400;
@@ -198,15 +255,18 @@
   color: var(--text-secondary);
   text-align: left;
   margin-bottom: var(--spacing-md);
+  min-height: 2.6rem;
 }
 
 .quest-meta {
   display: flex;
+  align-items: center;
   justify-content: space-between;
+  gap: var(--spacing-md);
   padding: var(--spacing-md) 0;
   border-top: 1px solid var(--border-subtle);
-  border-bottom: 1px solid var(--border-subtle);
-  margin-bottom: var(--spacing-sm);
+  margin-top: auto;
+  margin-bottom: 0;
   font-size: var(--font-size-sm);
 }
 
@@ -228,6 +288,12 @@
 }
 
 .quest-difficulty {
+  display: inline-flex;
+  align-items: center;
+  min-height: 1.75rem;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-primary);
   text-align: center;
   font-size: var(--font-size-xs);
   text-transform: none;
@@ -241,14 +307,30 @@
 
 .quest-card:hover .quest-difficulty {
   color: var(--ibm-blue);
+  border-color: #d0e2ff;
+  background: #ffffff;
   transform: translateY(-1px);
 }
 
 .quest-connector {
-  font-size: 2rem;
-  color: var(--ibm-blue);
+  width: 3.4rem;
+  height: 1px;
+  background: linear-gradient(90deg, var(--border-subtle), var(--ibm-blue), var(--border-subtle));
   transform: none;
   flex: 0 0 auto;
+  position: relative;
+}
+
+.quest-connector::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -0.18rem;
+  width: 0.42rem;
+  height: 0.42rem;
+  border-top: 1px solid var(--ibm-blue);
+  border-right: 1px solid var(--ibm-blue);
+  transform: translateY(-50%) rotate(45deg);
 }
 
 .quest-map-footer {

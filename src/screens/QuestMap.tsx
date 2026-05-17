@@ -55,7 +55,7 @@ export function QuestMap() {
           />
         </Suspense>
 
-        <div className="quest-path">
+        <div className="quest-path" aria-label="CodeQuest Bob onboarding quest path">
           {quests.map((quest, index) => (
             <div key={quest.id} className="quest-node">
               {isQuestCompleted(quest.id) && <div className="quest-completed-label">Completed</div>}
@@ -68,13 +68,24 @@ export function QuestMap() {
                 onClick={() => selectQuest(quest.id)}
                 style={{ borderColor: quest.color }}
               >
-                <InfoPopover
-                  label="Quest Level"
-                  description="Represents the progression stage in your onboarding journey"
-                >
-                  <div className="quest-level">Level {quest.level}</div>
-                </InfoPopover>
-                <div className="quest-icon">{getIcon(quest.badge.icon)}</div>
+                <div className="quest-card-topline">
+                  <InfoPopover
+                    label="Quest Level"
+                    description="Represents the progression stage in your onboarding journey"
+                  >
+                    <span className="quest-level">Level {quest.level}</span>
+                  </InfoPopover>
+                  <InfoPopover
+                    label="Quest Difficulty"
+                    description="Estimated complexity based on repository analysis and required skills"
+                  >
+                    <span className="quest-difficulty">{quest.difficulty}</span>
+                  </InfoPopover>
+                </div>
+                <div className="quest-card-visual">
+                  <div className="quest-icon">{getIcon(quest.badge.icon)}</div>
+                  <span className="quest-stage-number">{String(index + 1).padStart(2, '0')}</span>
+                </div>
                 <h3 className="quest-title">{quest.title}</h3>
                 <p className="quest-subtitle">{quest.subtitle}</p>
                 <div className="quest-meta">
@@ -86,14 +97,8 @@ export function QuestMap() {
                   </InfoPopover>
                   <span className="quest-time">{quest.estimatedTime}</span>
                 </div>
-                <InfoPopover
-                  label="Quest Difficulty"
-                  description="Estimated complexity based on repository analysis and required skills"
-                >
-                  <div className="quest-difficulty">{quest.difficulty}</div>
-                </InfoPopover>
               </button>
-              {index < quests.length - 1 && <div className="quest-connector">→</div>}
+              {index < quests.length - 1 && <div className="quest-connector" aria-hidden="true" />}
             </div>
           ))}
         </div>
