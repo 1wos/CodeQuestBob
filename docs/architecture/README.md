@@ -4,7 +4,7 @@ This folder contains slide-ready architecture assets for the IBM Bob Hackathon s
 
 ## Files
 
-- `codequest-bob-architecture-clean.svg` - portfolio-ready architecture graphic with embedded IBM/Watson icons.
+- `codequest-bob-architecture-clean.svg` - portfolio-ready architecture graphic with embedded IBM/Watson and product stack icons.
 - `../screenshots/codequest-bob-architecture-clean.png` - Medium/README-friendly rendered PNG.
 - `codequest-bob-architecture.svg` - editable source variant.
 - `codequest-bob-architecture.mmd` - Lightweight Mermaid reference for the underlying system flow.
@@ -21,7 +21,10 @@ The diagram is designed to communicate four things quickly:
    - Watson NLU: keyword and learning signal extraction.
    - Watson Text to Speech and Speech to Text: quest audio briefing loop.
    - IBM Cloudant: saved Skill Boost persistence.
-4. Growth evidence is explicit: `bob_sessions`, First PR package, Quest Badges, Passport timeline.
+4. Growth records are explicit: `bob_sessions`, First PR package, Quest Badges, Passport timeline.
+
+IBM/Watson service visuals are kept in `docs/assets/ibm-icons` and `docs/assets/ibm-app-icons`.
+Product stack visuals for React, Vite, Three.js, Vercel, GitHub, TypeScript, and Node.js are kept in `docs/assets/skill-icons`.
 
 ## Recommended Slide Caption
 

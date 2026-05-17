@@ -115,7 +115,7 @@ Repository Intake
   -> Developer Growth Passport
 ```
 
-The core product idea is simple: the developer should not only understand the repository. They should leave with confidence, evidence, and a next action.
+The core product idea is simple: the developer should not only understand the repository. They should leave with confidence, a growth record, and a next action.
 
 ## Product Preview
 
@@ -175,7 +175,7 @@ API keys are never exposed to the browser. IBM service calls go through server-s
 
 ## Architecture
 
-The architecture diagram follows IBM Cloud architecture-stencil conventions, while the UI follows IBM Carbon-inspired interaction patterns. Selected official IBM Cloud and Watson SVG assets are kept in [docs/assets/ibm-icons](docs/assets/ibm-icons/README.md) and [docs/assets/ibm-app-icons](docs/assets/ibm-app-icons/README.md) for README and article visuals.
+The architecture diagram follows IBM Cloud architecture-stencil conventions, while the UI follows IBM Carbon-inspired interaction patterns. Selected official IBM Cloud and Watson assets are kept in [docs/assets/ibm-icons](docs/assets/ibm-icons/README.md) and [docs/assets/ibm-app-icons](docs/assets/ibm-app-icons/README.md); product stack icons are kept in [docs/assets/skill-icons](docs/assets/skill-icons/README.md).
 
 <p align="center">
   <img src="docs/architecture/codequest-bob-architecture-clean.svg" alt="CodeQuest Bob architecture diagram" width="100%" />

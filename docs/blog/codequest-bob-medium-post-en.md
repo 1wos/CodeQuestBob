@@ -7,7 +7,7 @@
 
 In May 2026, I joined the **IBM Bob Hackathon** hosted on lablab.ai. The event ended with 1,679 teams and 502 AI applications. I joined solo, and because I had a research group meeting on Saturday, I had to make the scope small, sharp, and product-driven from the start.
 
-Within that limited build time, I needed to ship a React application, connect IBM Cloud services, build a 3D interaction layer, prepare a demo video, create a pitch deck, deploy the app, and polish the README enough for judges and future portfolio readers.
+Within that limited build time, I needed to ship a React application, connect IBM Cloud services, build a 3D interaction layer, prepare a demo video, create a pitch deck, deploy the app, and polish the README enough for reviewers and future portfolio readers.
 
 This is the story of how I built **CodeQuest Bob**, and what I learned about using an AI development partner in a real product sprint.
 
