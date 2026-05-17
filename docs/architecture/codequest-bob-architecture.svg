@@ -26,7 +26,6 @@
       .line-blue { stroke: #0f62fe; stroke-width: 2; fill: none; marker-end: url(#arrow-blue); }
       .line-gray { stroke: #6f6f6f; stroke-width: 1.5; fill: none; marker-end: url(#arrow-gray); }
       .line-soft { stroke: #c6c6c6; stroke-width: 1; fill: none; }
-      .label-tag-gray { fill: #ffffff; stroke: #e0e0e0; stroke-width: 1; }
     </style>
   </defs>
 
@@ -123,6 +122,4 @@
   <path class="line-soft" d="M1230 440 L1160 550" />
   <path class="line-soft" d="M1230 650 L1160 610" />
 
-  <rect class="label-tag-gray" x="1010" y="436" width="112" height="22" />
-  <text class="tiny" x="1018" y="452">saved boosts</text>
 </svg>
