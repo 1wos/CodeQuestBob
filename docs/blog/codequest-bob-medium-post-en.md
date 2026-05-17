@@ -3,11 +3,11 @@
 ![CodeQuest Bob cover image](https://github.com/1wos/CodeQuestBob/raw/main/docs/submission-assets/CodeQuestBob_Cover_Image.png)
 *CodeQuest Bob: Others explain code. CodeQuest Bob grows developers.*
 
-**Solo, out of 5,627 participants. With roughly one real day to build.**
+**I treated this hackathon as a focused product sprint.**
 
-In May 2026, I joined the **IBM Bob Hackathon** hosted on lablab.ai. The event ended with 1,679 teams and 502 AI applications. I joined solo, and because I had a research group meeting on Saturday, the amount of focused development time I actually had was closer to one day than forty-eight hours.
+In May 2026, I joined the **IBM Bob Hackathon** hosted on lablab.ai. The event ended with 1,679 teams and 502 AI applications. I joined solo, and because I had a research group meeting on Saturday, I had to make the scope small, sharp, and product-driven from the start.
 
-Inside that window, I needed to ship a React application, connect IBM Cloud services, build a 3D interaction layer, prepare a demo video, create a pitch deck, deploy the app, and polish the README enough for judges and future portfolio readers.
+Within that limited build time, I needed to ship a React application, connect IBM Cloud services, build a 3D interaction layer, prepare a demo video, create a pitch deck, deploy the app, and polish the README enough for judges and future portfolio readers.
 
 This is the story of how I built **CodeQuest Bob**, and what I learned about using an AI development partner in a real product sprint.
 
