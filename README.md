@@ -66,15 +66,15 @@
 <table align="center">
   <tr>
     <td align="center" width="170">
-      <img src="docs/assets/ibm-app-icons/watson-nlu.svg" alt="IBM Watson Natural Language Understanding" width="46" /><br />
+      <img src="docs/assets/ibm-app-icons/watson-nlu.png" alt="IBM Watson Natural Language Understanding" width="46" /><br />
       <sub>Watson NLU</sub>
     </td>
     <td align="center" width="170">
-      <img src="docs/assets/ibm-app-icons/watson-tts.svg" alt="IBM Watson Text to Speech" width="46" /><br />
+      <img src="docs/assets/ibm-app-icons/watson-tts.png" alt="IBM Watson Text to Speech" width="46" /><br />
       <sub>Text to Speech</sub>
     </td>
     <td align="center" width="170">
-      <img src="docs/assets/ibm-app-icons/watson-stt.svg" alt="IBM Watson Speech to Text" width="46" /><br />
+      <img src="docs/assets/ibm-app-icons/watson-stt.png" alt="IBM Watson Speech to Text" width="46" /><br />
       <sub>Speech to Text</sub>
     </td>
   </tr>
